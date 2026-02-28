@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_themes",
+  "info": {
+    "singularName": "video-theme",
+    "pluralName": "video-themes",
+    "displayName": "Video Theme"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": {
+    "name": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "description": { "type": "text", "pluginOptions": { "i18n": { "localized": true } } },
+    "sortOrder": { "type": "integer" },
+    "videos": { "type": "relation", "relation": "oneToMany", "target": "api::video.video", "mappedBy": "theme" }
+  }
+}

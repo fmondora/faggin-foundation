@@ -1,0 +1,16 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": {
+    "pageTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "introText": { "type": "richtext", "pluginOptions": { "i18n": { "localized": true } } },
+    "seo": { "type": "component", "component": "shared.seo" }
+  }
+}

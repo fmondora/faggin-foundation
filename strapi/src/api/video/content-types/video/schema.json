@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Video"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string" },
+    "youtubeId": { "type": "string" },
+    "description": { "type": "text" },
+    "theme": { "type": "relation", "relation": "manyToOne", "target": "api::video-theme.video-theme", "inversedBy": "videos" },
+    "sortOrder": { "type": "integer" }
+  }
+}

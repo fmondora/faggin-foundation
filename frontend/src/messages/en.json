@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "video": "Video Series",
+    "events": "Events",
+    "research": "Research",
+    "signup": "Sign up",
+    "account": "Account",
+    "logout": "Log out"
+  },
+  "home": {
+    "myStory": "My Story",
+    "viewAllVideos": "View all videos →",
+    "purposeTitle": "Foundation purpose",
+    "watchPresentation": "WATCH PRESENTATION"
+  },
+  "events": {
+    "upcoming": "Upcoming events",
+    "past": "Past events",
+    "noUpcoming": "New events coming soon. Subscribe to the newsletter to stay updated.",
+    "watch": "Watch →",
+    "subtitle": "Conferences, festivals and events that Federico Faggin has attended or will attend."
+  },
+  "about": {
+    "awards": "Awards",
+    "bioTitle": "Biography"
+  },
+  "research": {
+    "ourResearch": "Our research",
+    "researchAreas": "Research areas",
+    "collaborations": "Academic collaborations"
+  },
+  "newsletter": {
+    "title": "Stay connected with our research",
+    "description": "Subscribe to the Faggin Foundation newsletter for updates on new content, events and progress in consciousness research.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "An error occurred. Please try again."
+  },
+  "footer": {
+    "description": "Promoting research on the nature and origin of consciousness.",
+    "pages": "Pages",
+    "follow": "Follow us",
+    "rights": "All rights reserved."
+  },
+  "voting": {
+    "title": "Which topics would you like to explore?",
+    "subtitle": "The foundation wants to hear your voice. Sign up and vote for the topic you'd like to see explored in upcoming content.",
+    "vote": "Vote",
+    "voted": "Voted",
+    "loginPrompt": "Sign in to vote",
+    "votes": "votes"
+  },
+  "auth": {
+    "loginTitle": "Sign in or register",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "name@example.com",
+    "sendLink": "Send magic link",
+    "checkEmail": "Check your email for the login link.",
+    "error": "An error occurred. Please try again."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Page not found"
+  }
+}

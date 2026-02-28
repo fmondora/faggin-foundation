@@ -1,10 +1,6 @@
 -- Create the supabase_auth database for GoTrue
-CREATE DATABASE supabase_auth;
+SELECT 'CREATE DATABASE supabase_auth'
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'supabase_auth')\gexec
 
--- Grant permissions
+-- Grant permissions on supabase_auth
 GRANT ALL PRIVILEGES ON DATABASE supabase_auth TO faggin;
-
--- Connect to supabase_auth and create the auth schema
-\c supabase_auth;
-CREATE SCHEMA IF NOT EXISTS auth;
-GRANT ALL ON SCHEMA auth TO faggin;

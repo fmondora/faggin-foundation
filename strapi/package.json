@@ -1,0 +1,25 @@
+{
+  "name": "faggin-strapi",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build"
+  },
+  "dependencies": {
+    "@strapi/strapi": "^5.37.0",
+    "@strapi/plugin-users-permissions": "^5.37.0",
+    "pg": "^8.13.0",
+    "better-sqlite3": "^11.0.0",
+    "esbuild": "^0.24.0",
+    "esbuild-register": "^3.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x"
+  }
+}

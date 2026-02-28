@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "votes",
+  "info": {
+    "singularName": "vote",
+    "pluralName": "votes",
+    "displayName": "Vote"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "userEmail": { "type": "email" },
+    "topic": { "type": "relation", "relation": "manyToOne", "target": "api::topic.topic", "inversedBy": "votes" }
+  }
+}

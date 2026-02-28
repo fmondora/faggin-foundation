@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Über uns",
+    "video": "Videoreihe",
+    "events": "Veranstaltungen",
+    "research": "Forschung",
+    "signup": "Registrieren",
+    "account": "Konto",
+    "logout": "Abmelden"
+  },
+  "home": {
+    "myStory": "Meine Geschichte",
+    "viewAllVideos": "Alle Videos ansehen →",
+    "purposeTitle": "Zweck der Stiftung",
+    "watchPresentation": "PRÄSENTATION ANSEHEN"
+  },
+  "events": {
+    "upcoming": "Kommende Veranstaltungen",
+    "past": "Vergangene Veranstaltungen",
+    "noUpcoming": "Neue Veranstaltungen folgen in Kürze. Abonnieren Sie den Newsletter.",
+    "watch": "Ansehen →",
+    "subtitle": "Konferenzen, Festivals und Veranstaltungen, an denen Federico Faggin teilgenommen hat oder teilnehmen wird."
+  },
+  "about": {
+    "awards": "Auszeichnungen",
+    "bioTitle": "Biografie"
+  },
+  "research": {
+    "ourResearch": "Unsere Forschung",
+    "researchAreas": "Forschungsbereiche",
+    "collaborations": "Akademische Kooperationen"
+  },
+  "newsletter": {
+    "title": "Bleiben Sie mit unserer Forschung verbunden",
+    "description": "Abonnieren Sie den Newsletter der Faggin Foundation für Updates zu neuen Inhalten, Veranstaltungen und Fortschritten in der Bewusstseinsforschung.",
+    "placeholder": "Ihre E-Mail-Adresse",
+    "button": "Abonnieren",
+    "success": "Vielen Dank für Ihr Abonnement!",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "footer": {
+    "description": "Förderung der Forschung über die Natur und den Ursprung des Bewusstseins.",
+    "pages": "Seiten",
+    "follow": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "voting": {
+    "title": "Welche Themen möchten Sie vertiefen?",
+    "subtitle": "Die Stiftung möchte Ihre Stimme hören. Registrieren Sie sich und stimmen Sie für das Thema ab.",
+    "vote": "Abstimmen",
+    "voted": "Abgestimmt",
+    "loginPrompt": "Anmelden zum Abstimmen",
+    "votes": "Stimmen"
+  },
+  "auth": {
+    "loginTitle": "Anmelden oder registrieren",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "name@beispiel.de",
+    "sendLink": "Magic Link senden",
+    "checkEmail": "Überprüfen Sie Ihre E-Mail für den Anmeldelink.",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Seite nicht gefunden"
+  }
+}

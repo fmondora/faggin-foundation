@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "research_pages",
+  "info": {
+    "singularName": "research-page",
+    "pluralName": "research-pages",
+    "displayName": "Research Page"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": {
+    "pageTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "introText": { "type": "richtext", "pluginOptions": { "i18n": { "localized": true } } },
+    "areasTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "areas": { "type": "json" },
+    "collaborationsTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "collaborations": { "type": "json" },
+    "votingTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "votingSubtitle": { "type": "richtext", "pluginOptions": { "i18n": { "localized": true } } },
+    "seo": { "type": "component", "component": "shared.seo" }
+  }
+}

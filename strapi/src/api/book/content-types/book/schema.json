@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": {
+    "title": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "tagline": { "type": "text", "pluginOptions": { "i18n": { "localized": true } } },
+    "year": { "type": "integer" },
+    "videoUrl": { "type": "string" },
+    "buttonLabel": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "availableIn": { "type": "json" },
+    "cover": { "type": "media", "allowedTypes": ["images"] },
+    "sortOrder": { "type": "integer" }
+  }
+}

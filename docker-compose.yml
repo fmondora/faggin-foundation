@@ -10,7 +10,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+      - ./scripts/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
       interval: 5s
@@ -38,12 +38,19 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - strapi_uploads:/opt/app/public/uploads
+      - ./strapi/src:/opt/app/src
     depends_on:
       postgres:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://0.0.0.0:1337/admin || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
 
   supabase-auth:
-    image: supabase/gotrue:v2.170.0
+    image: supabase/gotrue:v2.132.3
     restart: unless-stopped
     ports:
       - "9999:9999"
@@ -63,6 +70,7 @@ services:
       GOTRUE_SMTP_ADMIN_EMAIL: ${GOTRUE_SMTP_ADMIN_EMAIL}
       GOTRUE_MAILER_URLPATHS_CONFIRMATION: ${GOTRUE_MAILER_URLPATHS_CONFIRMATION}
       GOTRUE_MAILER_URLPATHS_RECOVERY: ${GOTRUE_MAILER_URLPATHS_RECOVERY}
+      API_EXTERNAL_URL: http://localhost:9999
     depends_on:
       postgres:
         condition: service_healthy
@@ -80,15 +88,22 @@ services:
     ports:
       - "3000:3000"
     environment:
-      NEXT_PUBLIC_STRAPI_URL: http://strapi:1337
-      NEXT_PUBLIC_SUPABASE_URL: http://supabase-auth:9999
+      NEXT_PUBLIC_STRAPI_URL: http://localhost:1337
+      STRAPI_INTERNAL_URL: http://strapi:1337
+      NEXT_PUBLIC_SUPABASE_URL: http://localhost:3000
+      SUPABASE_INTERNAL_URL: http://supabase-auth:9999
       NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
       STRAPI_API_TOKEN: ${STRAPI_API_TOKEN}
       RESEND_API_KEY: ${RESEND_API_KEY}
       RESEND_AUDIENCE_ID: ${RESEND_AUDIENCE_ID}
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
     depends_on:
-      - strapi
-      - supabase-auth
+      strapi:
+        condition: service_healthy
+      supabase-auth:
+        condition: service_started
 
 volumes:
   postgres_data:

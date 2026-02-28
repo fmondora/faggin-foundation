@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bio_sections",
+  "info": {
+    "singularName": "bio-section",
+    "pluralName": "bio-sections",
+    "displayName": "Bio Section"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": {
+    "period": { "type": "string" },
+    "title": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "content": { "type": "richtext", "pluginOptions": { "i18n": { "localized": true } } },
+    "sortOrder": { "type": "integer" }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "video": "Serie de Videos",
+    "events": "Eventos",
+    "research": "Investigación",
+    "signup": "Registrarse",
+    "account": "Cuenta",
+    "logout": "Cerrar sesión"
+  },
+  "home": {
+    "myStory": "Mi Historia",
+    "viewAllVideos": "Ver todos los videos →",
+    "purposeTitle": "Propósito de la fundación",
+    "watchPresentation": "VER PRESENTACIÓN"
+  },
+  "events": {
+    "upcoming": "Próximos eventos",
+    "past": "Eventos pasados",
+    "noUpcoming": "Nuevos eventos próximamente. Suscríbete al boletín para estar al día.",
+    "watch": "Ver →",
+    "subtitle": "Conferencias, festivales y encuentros en los que Federico Faggin ha participado o participará."
+  },
+  "about": {
+    "awards": "Premios",
+    "bioTitle": "Biografía"
+  },
+  "research": {
+    "ourResearch": "Nuestra investigación",
+    "researchAreas": "Áreas de investigación",
+    "collaborations": "Colaboraciones académicas"
+  },
+  "newsletter": {
+    "title": "Mantente conectado con nuestra investigación",
+    "description": "Suscríbete al boletín de la Faggin Foundation para recibir actualizaciones sobre nuevos contenidos, eventos y avances en la investigación sobre la conciencia.",
+    "placeholder": "Tu dirección de email",
+    "button": "Suscribirse",
+    "success": "¡Gracias por suscribirte!",
+    "error": "Se ha producido un error. Inténtalo de nuevo."
+  },
+  "footer": {
+    "description": "Promoviendo la investigación sobre la naturaleza y el origen de la conciencia.",
+    "pages": "Páginas",
+    "follow": "Síguenos",
+    "rights": "Todos los derechos reservados."
+  },
+  "voting": {
+    "title": "¿Qué temas te gustaría explorar?",
+    "subtitle": "La fundación quiere escuchar tu voz. Regístrate y vota por el tema que te gustaría ver desarrollado.",
+    "vote": "Votar",
+    "voted": "Votado",
+    "loginPrompt": "Inicia sesión para votar",
+    "votes": "votos"
+  },
+  "auth": {
+    "loginTitle": "Iniciar sesión o registrarse",
+    "emailLabel": "Dirección de email",
+    "emailPlaceholder": "nombre@ejemplo.es",
+    "sendLink": "Enviar magic link",
+    "checkEmail": "Revisa tu email para el enlace de acceso.",
+    "error": "Se ha producido un error. Inténtalo de nuevo."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Página no encontrada"
+  }
+}

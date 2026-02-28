@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": {
+    "purposeTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "purposeText": { "type": "richtext", "pluginOptions": { "i18n": { "localized": true } } },
+    "storyTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "storyBio": { "type": "richtext", "pluginOptions": { "i18n": { "localized": true } } },
+    "storyVideoUrl": { "type": "string" },
+    "videoSerieTitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "videoSerieSubtitle": { "type": "string", "pluginOptions": { "i18n": { "localized": true } } },
+    "featuredVideos": { "type": "relation", "relation": "oneToMany", "target": "api::video.video" },
+    "seo": { "type": "component", "component": "shared.seo" }
+  }
+}

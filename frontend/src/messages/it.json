@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "video": "Video Serie",
+    "events": "Eventi",
+    "research": "Ricerca e Sviluppo",
+    "signup": "Iscriviti",
+    "account": "Account",
+    "logout": "Esci"
+  },
+  "home": {
+    "myStory": "La Mia Storia",
+    "viewAllVideos": "Vedi tutti i video →",
+    "purposeTitle": "Scopo della fondazione",
+    "watchPresentation": "VIDEO PRESENTAZIONE"
+  },
+  "events": {
+    "upcoming": "Prossimi eventi",
+    "past": "Eventi passati",
+    "noUpcoming": "Nuovi eventi in arrivo. Iscriviti alla newsletter per restare aggiornato.",
+    "watch": "Guarda →",
+    "subtitle": "Conferenze, festival e incontri a cui Federico Faggin ha partecipato o parteciperà."
+  },
+  "about": {
+    "awards": "Riconoscimenti",
+    "bioTitle": "Biografia"
+  },
+  "research": {
+    "ourResearch": "La nostra ricerca",
+    "researchAreas": "Aree di ricerca",
+    "collaborations": "Collaborazioni accademiche"
+  },
+  "newsletter": {
+    "title": "Resta connesso con la nostra ricerca",
+    "description": "Iscriviti alla newsletter della Faggin Foundation per ricevere aggiornamenti su nuovi contenuti, eventi e progressi nella ricerca sulla coscienza.",
+    "placeholder": "Il tuo indirizzo email",
+    "button": "Iscriviti",
+    "success": "Grazie per l'iscrizione!",
+    "error": "Si è verificato un errore. Riprova."
+  },
+  "footer": {
+    "description": "Promuovere la ricerca sulla natura e l'origine della coscienza.",
+    "pages": "Pagine",
+    "follow": "Seguici",
+    "rights": "Tutti i diritti riservati."
+  },
+  "voting": {
+    "title": "Quali temi vuoi approfondire?",
+    "subtitle": "La fondazione vuole ascoltare la tua voce. Registrati e vota il tema che vorresti vedere approfondito nei prossimi contenuti.",
+    "vote": "Vota",
+    "voted": "Votato",
+    "loginPrompt": "Accedi per votare",
+    "votes": "voti"
+  },
+  "auth": {
+    "loginTitle": "Accedi o registrati",
+    "emailLabel": "Indirizzo email",
+    "emailPlaceholder": "nome@esempio.it",
+    "sendLink": "Invia magic link",
+    "checkEmail": "Controlla la tua email per il link di accesso.",
+    "error": "Si è verificato un errore. Riprova."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Pagina non trovata"
+  }
+}

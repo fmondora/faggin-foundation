@@ -1,0 +1,12 @@
+{
+  "name": "faggin-foundation",
+  "private": true,
+  "scripts": {
+    "seed": "npx tsx scripts/seed-strapi.ts",
+    "dev": "docker compose up",
+    "dev:build": "docker compose up --build"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}

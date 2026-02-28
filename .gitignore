@@ -1,0 +1,14 @@
+node_modules/
+.env
+.next/
+frontend/.next/
+frontend/node_modules/
+strapi/node_modules/
+strapi/.tmp/
+strapi/dist/
+strapi/build/
+strapi/.cache/
+strapi/.strapi/
+*.log
+.DS_Store
+data/

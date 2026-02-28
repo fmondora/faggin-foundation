@@ -1,67 +1,95 @@
 services:
-  ghost:
-    image: ghost:latest
-    restart: always
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
     ports:
-      - "2368:2368"
+      - "5432:5432"
     environment:
-      url: http://localhost:2368
-      database__client: mysql
-      database__connection__host: db
-      database__connection__user: ghost
-      database__connection__password: ghostdbpass
-      database__connection__database: ghost
-      mail__transport: SMTP
-      mail__from: noreply@fagginfoundation.org
-      mail__options__host: mailhog
-      mail__options__port: 1025
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     volumes:
-      - ghost_content:/var/lib/ghost/content
-      - ./content/themes/faggin-foundation:/var/lib/ghost/content/themes/faggin-foundation
-    depends_on:
-      db:
-        condition: service_healthy
-      mailhog:
-        condition: service_started
-
-  mailhog:
-    image: mailhog/mailhog:latest
-    restart: always
-    ports:
-      - "8025:8025"
-
-  db:
-    image: mysql:8.0
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: ghost
-      MYSQL_USER: ghost
-      MYSQL_PASSWORD: ghostdbpass
-    volumes:
-      - ghost_db:/var/lib/mysql
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 5s
       timeout: 5s
       retries: 5
 
-  voting:
-    build: ./voting-service
-    restart: always
+  strapi:
+    build: ./strapi
+    restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "1337:1337"
     environment:
-      GHOST_URL: http://ghost:2368
-      PORT: 3001
-      ADMIN_TOKEN: faggin-admin-secret
+      HOST: ${STRAPI_HOST}
+      PORT: ${STRAPI_PORT}
+      APP_KEYS: ${STRAPI_APP_KEYS}
+      API_TOKEN_SALT: ${STRAPI_API_TOKEN_SALT}
+      ADMIN_JWT_SECRET: ${STRAPI_ADMIN_JWT_SECRET}
+      TRANSFER_TOKEN_SALT: ${STRAPI_TRANSFER_TOKEN_SALT}
+      JWT_SECRET: ${STRAPI_JWT_SECRET}
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
-      - voting_data:/app/data
+      - strapi_uploads:/opt/app/public/uploads
     depends_on:
-      ghost:
-        condition: service_started
+      postgres:
+        condition: service_healthy
+
+  supabase-auth:
+    image: supabase/gotrue:v2.170.0
+    restart: unless-stopped
+    ports:
+      - "9999:9999"
+    environment:
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: 9999
+      GOTRUE_DB_DRIVER: ${GOTRUE_DB_DRIVER}
+      GOTRUE_DB_DATABASE_URL: ${GOTRUE_DB_DATABASE_URL}
+      GOTRUE_SITE_URL: ${GOTRUE_SITE_URL}
+      GOTRUE_URI_ALLOW_LIST: ${GOTRUE_URI_ALLOW_LIST}
+      GOTRUE_JWT_SECRET: ${GOTRUE_JWT_SECRET}
+      GOTRUE_JWT_EXP: ${GOTRUE_JWT_EXP}
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: ${GOTRUE_EXTERNAL_EMAIL_ENABLED}
+      GOTRUE_MAILER_AUTOCONFIRM: ${GOTRUE_MAILER_AUTOCONFIRM}
+      GOTRUE_SMTP_HOST: ${GOTRUE_SMTP_HOST}
+      GOTRUE_SMTP_PORT: ${GOTRUE_SMTP_PORT}
+      GOTRUE_SMTP_ADMIN_EMAIL: ${GOTRUE_SMTP_ADMIN_EMAIL}
+      GOTRUE_MAILER_URLPATHS_CONFIRMATION: ${GOTRUE_MAILER_URLPATHS_CONFIRMATION}
+      GOTRUE_MAILER_URLPATHS_RECOVERY: ${GOTRUE_MAILER_URLPATHS_RECOVERY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_STRAPI_URL: http://strapi:1337
+      NEXT_PUBLIC_SUPABASE_URL: http://supabase-auth:9999
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      STRAPI_API_TOKEN: ${STRAPI_API_TOKEN}
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      RESEND_AUDIENCE_ID: ${RESEND_AUDIENCE_ID}
+    depends_on:
+      - strapi
+      - supabase-auth
 
 volumes:
-  ghost_content:
-  ghost_db:
-  voting_data:
+  postgres_data:
+  strapi_uploads:

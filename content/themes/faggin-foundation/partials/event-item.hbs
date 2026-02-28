@@ -1,0 +1,14 @@
+<div class="event-item">
+    <div class="event-date">
+        <span>{{date}}</span>
+    </div>
+    <div class="event-details">
+        <h4>{{title}}</h4>
+        <p class="event-location">{{location}}</p>
+    </div>
+    {{#if videoUrl}}
+        <div class="event-action">
+            <a href="{{videoUrl}}" class="btn btn-small" target="_blank" rel="noopener">Video</a>
+        </div>
+    {{/if}}
+</div>

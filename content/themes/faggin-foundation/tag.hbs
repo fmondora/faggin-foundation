@@ -1,0 +1,33 @@
+{{!< default}}
+
+<section class="tag-page">
+    <header class="page-header">
+        <div class="container">
+            <h1>{{name}}</h1>
+            {{#if description}}
+                <p class="tag-description">{{description}}</p>
+            {{/if}}
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post-grid">
+            {{#foreach posts}}
+                <article class="post-card">
+                    {{#if feature_image}}
+                        <a href="{{url}}" class="post-card-image">
+                            <img src="{{feature_image}}" alt="{{title}}">
+                        </a>
+                    {{/if}}
+                    <div class="post-card-content">
+                        <h3><a href="{{url}}">{{title}}</a></h3>
+                        <p>{{excerpt words="25"}}</p>
+                        <span class="post-card-date">{{date format="D MMMM YYYY"}}</span>
+                    </div>
+                </article>
+            {{/foreach}}
+        </div>
+
+        {{pagination}}
+    </div>
+</section>

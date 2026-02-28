@@ -1,0 +1,67 @@
+services:
+  ghost:
+    image: ghost:latest
+    restart: always
+    ports:
+      - "2368:2368"
+    environment:
+      url: http://localhost:2368
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: ghost
+      database__connection__password: ghostdbpass
+      database__connection__database: ghost
+      mail__transport: SMTP
+      mail__from: noreply@fagginfoundation.org
+      mail__options__host: mailhog
+      mail__options__port: 1025
+    volumes:
+      - ghost_content:/var/lib/ghost/content
+      - ./content/themes/faggin-foundation:/var/lib/ghost/content/themes/faggin-foundation
+    depends_on:
+      db:
+        condition: service_healthy
+      mailhog:
+        condition: service_started
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    restart: always
+    ports:
+      - "8025:8025"
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: ghost
+      MYSQL_USER: ghost
+      MYSQL_PASSWORD: ghostdbpass
+    volumes:
+      - ghost_db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  voting:
+    build: ./voting-service
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      GHOST_URL: http://ghost:2368
+      PORT: 3001
+      ADMIN_TOKEN: faggin-admin-secret
+    volumes:
+      - voting_data:/app/data
+    depends_on:
+      ghost:
+        condition: service_started
+
+volumes:
+  ghost_content:
+  ghost_db:
+  voting_data:

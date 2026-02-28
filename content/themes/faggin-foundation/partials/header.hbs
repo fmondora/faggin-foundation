@@ -1,0 +1,35 @@
+<header class="site-header">
+    <div class="header-brand">
+        <a href="{{@site.url}}" class="site-logo">
+            {{#if @site.logo}}
+                <img src="{{@site.logo}}" alt="{{@site.title}}">
+            {{else}}
+                <span class="site-title-text">FAGGIN FOUNDATION</span>
+            {{/if}}
+        </a>
+    </div>
+
+    <div class="header-inner">
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+
+        <nav class="site-nav">
+            <ul>
+                {{#foreach navigation}}
+                    <li class="{{#if current}}nav-current{{/if}}">
+                        <a href="{{url}}">{{label}}</a>
+                    </li>
+                {{/foreach}}
+            </ul>
+            <div class="nav-actions">
+                {{#unless @member}}
+                    <a href="#/portal/signup" class="btn-signup" data-portal="signup" data-i18n="nav.signup">Iscriviti</a>
+                {{else}}
+                    <a href="#/portal/account" class="btn-account" data-portal="account" data-i18n="nav.account">Account</a>
+                {{/unless}}
+            </div>
+            {{> language-switcher}}
+        </nav>
+    </div>
+</header>

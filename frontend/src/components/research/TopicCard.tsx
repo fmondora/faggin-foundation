@@ -1,8 +1,9 @@
 'use client';
 import { useTranslations } from 'next-intl';
+import type { TopicWithCounts } from '@/types/strapi';
 
 export default function TopicCard({ topic, isLoggedIn, onVote, onRemoveVote }: {
-  topic: { documentId: string; title: string; description: string; voteCount: number; userHasVoted: boolean };
+  topic: TopicWithCounts;
   isLoggedIn: boolean;
   onVote: () => void;
   onRemoveVote: () => void;

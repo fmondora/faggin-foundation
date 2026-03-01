@@ -1,15 +1,17 @@
 import { Link } from '@/lib/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { getYoutubeThumbnail } from '@/lib/youtube';
+import type { HomepageData, Video } from '@/types/strapi';
 
-const FALLBACK_VIDEOS = [
+const FALLBACK_VIDEOS: Video[] = [
   { youtubeId: 'IBt4oUCNl3U', title: 'Noi Siamo Campi Quantistici Auto-Coscienti' },
   { youtubeId: 'ssE4h70qKWk', title: 'Quantum Fields Are Conscious' },
   { youtubeId: '0FUFewGHLLg', title: "QIP Explained (con D'Ariano)" },
   { youtubeId: '0nOtLj8UYCw', title: 'Penrose vs Faggin vs Kastrup' },
 ];
 
-export default function VideoGridPreview({ data }: { data?: any }) {
+export default function VideoGridPreview({ data }: { data?: Pick<HomepageData, 'videoSerieTitle' | 'videoSerieSubtitle' | 'featuredVideos'> }) {
   const t = useTranslations('home');
   const title = data?.videoSerieTitle || 'Video Serie';
   const subtitle = data?.videoSerieSubtitle || '';
@@ -23,10 +25,10 @@ export default function VideoGridPreview({ data }: { data?: any }) {
           {subtitle && <p className="text-white/70">{subtitle}</p>}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {videos.slice(0, 4).map((video: any) => (
+          {videos.slice(0, 4).map((video) => (
             <div key={video.youtubeId} className="bg-dark-lighter rounded overflow-hidden shadow-lg">
               <div className="relative aspect-video">
-                <Image src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`} alt={video.title} fill className="object-cover" />
+                <Image src={getYoutubeThumbnail(video.youtubeId)} alt={video.title} fill className="object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-16 h-16 bg-primary/90 rounded-full flex items-center justify-center">
                     <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>

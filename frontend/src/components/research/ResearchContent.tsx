@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import type { ResearchPageData } from '@/types/strapi';
 
 const FALLBACK_AREAS = [
   "Panpsichismo dell'Informazione Quantistica (QIP)",
@@ -11,7 +12,7 @@ const FALLBACK_COLLABORATIONS = [
   { title: "Collaborazione con Prof. Giacomo Mauro D'Ariano", description: 'Paper: "Hard Problem and Free Will: an information-theoretical approach"' },
 ];
 
-export default function ResearchContent({ data }: { data?: any }) {
+export default function ResearchContent({ data }: { data?: ResearchPageData }) {
   const t = useTranslations('research');
   const title = data?.pageTitle || t('ourResearch');
   const intro = data?.introText || "La Federico and Elvia Faggin Foundation promuove la ricerca teorica e sperimentale sulla natura e l'origine della coscienza presso università e istituti di ricerca.\n\nL'obiettivo è la creazione di una nuova teoria matematica della coscienza in grado di produrre previsioni verificabili sperimentalmente.";
@@ -27,11 +28,11 @@ export default function ResearchContent({ data }: { data?: any }) {
           <div className="text-text-light leading-relaxed whitespace-pre-line mb-6">{intro}</div>
           <h3 className="font-bold text-dark mb-3">{data?.areasTitle || t('researchAreas')}</h3>
           <ul className="list-disc list-inside space-y-2 text-text-light mb-8">
-            {(Array.isArray(areas) ? areas : []).map((area: any, i: number) => <li key={i}>{typeof area === 'string' ? area : area.name || area.title}</li>)}
+            {(Array.isArray(areas) ? areas : []).map((area, i) => <li key={i}>{typeof area === 'string' ? area : area.name || area.title}</li>)}
           </ul>
           <h3 className="font-bold text-dark mb-3">{data?.collaborationsTitle || t('collaborations')}</h3>
           <div className="space-y-4">
-            {(Array.isArray(collaborations) ? collaborations : []).map((collab: any, i: number) => (
+            {(Array.isArray(collaborations) ? collaborations : []).map((collab, i) => (
               <div key={i} className="bg-bg-alt p-4 rounded">
                 <h4 className="font-bold text-dark">{collab.title}</h4>
                 <p className="text-text-light text-sm">{collab.description}</p>

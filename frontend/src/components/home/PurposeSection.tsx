@@ -1,7 +1,8 @@
 import { useTranslations } from 'next-intl';
+import type { HomepageData } from '@/types/strapi';
 
 interface PurposeSectionProps {
-  data?: { purposeTitle?: string; purposeText?: string };
+  data?: Pick<HomepageData, 'purposeTitle' | 'purposeText'>;
 }
 
 export default function PurposeSection({ data }: PurposeSectionProps) {

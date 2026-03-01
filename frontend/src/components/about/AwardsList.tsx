@@ -1,18 +1,19 @@
 import { useTranslations } from 'next-intl';
+import type { Award } from '@/types/strapi';
 
-const FALLBACK_AWARDS = [
+const FALLBACK_AWARDS: Award[] = [
   { year: 2019, title: 'Cavaliere di Gran Croce', description: 'Presidente Mattarella' },
   { year: 2014, title: 'Premio Enrico Fermi', description: 'Società Italiana di Fisica' },
   { year: 2009, title: 'National Medal of Technology and Innovation', description: 'Presidente Obama' },
   { year: 2006, title: 'Lifetime Achievement Award', description: 'European Patent Organization' },
-  { year: 1997, title: 'Kyoto Prize per la Tecnologia Avanzata', description: '' },
-  { year: 1996, title: 'National Inventors Hall of Fame', description: '' },
-  { year: 1994, title: 'IEEE W. Wallace McDowell Award', description: '' },
-  { year: 1988, title: 'Marconi International Fellowship Award', description: '' },
+  { year: 1997, title: 'Kyoto Prize per la Tecnologia Avanzata' },
+  { year: 1996, title: 'National Inventors Hall of Fame' },
+  { year: 1994, title: 'IEEE W. Wallace McDowell Award' },
+  { year: 1988, title: 'Marconi International Fellowship Award' },
   { year: 1988, title: "Medaglia d'Oro per la Scienza e la Tecnologia", description: 'Presidente della Repubblica' },
 ];
 
-export default function AwardsList({ awards }: { awards?: any[] }) {
+export default function AwardsList({ awards }: { awards?: Award[] }) {
   const t = useTranslations('about');
   const displayAwards = awards?.length ? awards : FALLBACK_AWARDS;
 
@@ -21,7 +22,7 @@ export default function AwardsList({ awards }: { awards?: any[] }) {
       <div className="max-w-[800px] mx-auto">
         <h2 className="font-heading text-3xl font-bold text-center mb-10">{t('awards')}</h2>
         <div className="space-y-4">
-          {displayAwards.map((award: any, i: number) => (
+          {displayAwards.map((award, i) => (
             <div key={i} className="flex gap-4 items-baseline border-b border-white/10 pb-4">
               <span className="text-primary font-bold text-lg min-w-[60px]">{award.year}</span>
               <div>

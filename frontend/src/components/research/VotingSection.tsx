@@ -2,13 +2,11 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useAuth } from '@/components/auth/AuthProvider';
+import { getStrapiUrl } from '@/lib/strapi-url';
 import TopicCard from './TopicCard';
+import type { TopicWithCounts } from '@/types/strapi';
 
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-
-interface Topic { documentId: string; title: string; description: string; voteCount: number; userHasVoted: boolean; }
-
-const FALLBACK_TOPICS: Topic[] = [
+const FALLBACK_TOPICS: TopicWithCounts[] = [
   { documentId: '1', title: 'Coscienza e intelligenza artificiale', description: "Può una macchina diventare consapevole? Il dibattito tra Faggin e i sostenitori dell'IA forte.", voteCount: 0, userHasVoted: false },
   { documentId: '2', title: 'La fisica quantistica spiegata semplice', description: 'I concetti chiave della meccanica quantistica alla base della teoria di Faggin, accessibili a tutti.', voteCount: 0, userHasVoted: false },
   { documentId: '3', title: 'Esperienze di pre-morte e coscienza', description: 'Cosa suggeriscono le NDE sulla natura della coscienza e sulla sopravvivenza dopo la morte fisica?', voteCount: 0, userHasVoted: false },
@@ -22,14 +20,14 @@ const FALLBACK_TOPICS: Topic[] = [
 export default function VotingSection({ locale }: { locale: string }) {
   const t = useTranslations('voting');
   const { user } = useAuth();
-  const [topics, setTopics] = useState<Topic[]>(FALLBACK_TOPICS);
+  const [topics, setTopics] = useState<TopicWithCounts[]>(FALLBACK_TOPICS);
   const [loading, setLoading] = useState(true);
 
   const fetchTopics = async () => {
     try {
       const params = new URLSearchParams({ locale });
       if (user?.email) params.set('userEmail', user.email);
-      const res = await fetch(`${STRAPI_URL}/api/votes/topics-with-counts?${params}`);
+      const res = await fetch(`${getStrapiUrl()}/api/votes/topics-with-counts?${params}`);
       if (res.ok) { const json = await res.json(); if (json.data?.length) setTopics(json.data); }
     } catch {} finally { setLoading(false); }
   };
@@ -39,7 +37,7 @@ export default function VotingSection({ locale }: { locale: string }) {
   const handleVote = async (topicId: string) => {
     if (!user?.email) return;
     try {
-      await fetch(`${STRAPI_URL}/api/votes/cast`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicId, userEmail: user.email }) });
+      await fetch(`${getStrapiUrl()}/api/votes/cast`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicId, userEmail: user.email }) });
       fetchTopics();
     } catch {}
   };
@@ -47,7 +45,7 @@ export default function VotingSection({ locale }: { locale: string }) {
   const handleRemoveVote = async (topicId: string) => {
     if (!user?.email) return;
     try {
-      await fetch(`${STRAPI_URL}/api/votes/remove/${topicId}?userEmail=${user.email}`, { method: 'DELETE' });
+      await fetch(`${getStrapiUrl()}/api/votes/remove/${topicId}?userEmail=${user.email}`, { method: 'DELETE' });
       fetchTopics();
     } catch {}
   };

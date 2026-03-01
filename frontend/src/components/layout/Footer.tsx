@@ -3,15 +3,9 @@
 import { useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/lib/i18n/navigation';
+import { getStrapiUrl } from '@/lib/strapi-url';
 import NewsletterForm from '@/components/shared/NewsletterForm';
-
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-
-interface SocialLink {
-  platform: string;
-  url: string;
-  label: string;
-}
+import type { SocialLink } from '@/types/strapi';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -20,7 +14,7 @@ export default function Footer() {
   const [socialLinks, setSocialLinks] = useState<SocialLink[]>([]);
 
   useEffect(() => {
-    fetch(`${STRAPI_URL}/api/site-config?locale=${locale}&populate[socialLinks]=true`)
+    fetch(`${getStrapiUrl()}/api/site-config?locale=${locale}&populate[socialLinks]=true`)
       .then((res) => res.ok ? res.json() : null)
       .then((json) => {
         const links = json?.data?.socialLinks;

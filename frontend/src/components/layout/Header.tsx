@@ -12,7 +12,7 @@ import Image from 'next/image';
 export default function Header() {
   const t = useTranslations('nav');
   const pathname = usePathname();
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   const [showLogin, setShowLogin] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -42,7 +42,9 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
             {user ? (
-              <span className="text-sm text-white/90">{t('account')}</span>
+              <button onClick={() => signOut()} className="text-sm text-white/90 hover:text-white transition-colors">
+                {t('logout')}
+              </button>
             ) : (
               <button onClick={() => setShowLogin(true)} className="bg-white/20 hover:bg-white/30 text-white text-sm px-4 py-1.5 rounded transition-colors">
                 {t('signup')}

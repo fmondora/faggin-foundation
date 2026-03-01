@@ -13,7 +13,7 @@ interface MobileMenuProps {
 export default function MobileMenu({ open, onClose, navItems, onLoginClick }: MobileMenuProps) {
   const pathname = usePathname();
   const t = useTranslations('nav');
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   if (!open) return null;
 
   return (
@@ -33,7 +33,9 @@ export default function MobileMenu({ open, onClose, navItems, onLoginClick }: Mo
           ))}
           <hr className="border-white/20 my-2" />
           {user ? (
-            <span className="text-sm text-white/70">{t('account')}</span>
+            <button onClick={() => { signOut(); onClose(); }} className="text-left text-lg text-white/80">
+              {t('logout')}
+            </button>
           ) : (
             <button onClick={onLoginClick} className="text-left text-lg text-white/80">{t('signup')}</button>
           )}

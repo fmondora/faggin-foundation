@@ -38,17 +38,26 @@ module.exports = factories.createCoreController('api::vote.vote', ({ strapi }) =
     const { locale = 'it', userEmail } = ctx.query;
     const topics = await strapi.documents('api::topic.topic').findMany({
       locale,
-      populate: { votes: true },
       sort: 'sortOrder:asc',
     });
-    const result = topics.map((topic) => ({
-      documentId: topic.documentId,
-      title: topic.title,
-      description: topic.description,
-      sortOrder: topic.sortOrder,
-      voteCount: topic.votes?.length || 0,
-      userHasVoted: userEmail ? topic.votes?.some((v) => v.userEmail === userEmail) || false : false,
-    }));
+    // Query votes per topic using documentId filter (avoids locale-dependent populate issues)
+    const result = await Promise.all(
+      topics.map(async (topic) => {
+        const votes = await strapi.documents('api::vote.vote').findMany({
+          filters: { topic: { documentId: { $eq: topic.documentId } } },
+        });
+        return {
+          documentId: topic.documentId,
+          title: topic.title,
+          description: topic.description,
+          sortOrder: topic.sortOrder,
+          voteCount: votes.length,
+          userHasVoted: userEmail ? votes.some((v) => v.userEmail === userEmail) : false,
+        };
+      })
+    );
+    // Sort by vote count descending, then by sortOrder ascending as tiebreaker
+    result.sort((a, b) => b.voteCount - a.voteCount || a.sortOrder - b.sortOrder);
     return { data: result };
   },
 }));

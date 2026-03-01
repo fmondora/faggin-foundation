@@ -345,6 +345,9 @@ const TOPICS = {
 const SOCIAL_LINKS = [
   { platform: 'website', url: 'https://www.federicofaggin.com', label: 'federicofaggin.com', sortOrder: 1 },
   { platform: 'twitter', url: 'https://twitter.com/fedefaggin', label: '@fedefaggin', sortOrder: 2 },
+  { platform: 'facebook', url: 'https://www.facebook.com/FedericoFagginFoundation', label: 'Facebook', sortOrder: 3 },
+  { platform: 'instagram', url: 'https://www.instagram.com/federicofaggin', label: 'Instagram', sortOrder: 4 },
+  { platform: 'youtube', url: 'https://www.youtube.com/@FedericoFagginFoundation', label: 'YouTube', sortOrder: 5 },
 ];
 
 // ─── Home page content ──────────────────────────────────────────
@@ -657,6 +660,64 @@ async function seed() {
     log(`  ✓ [${locale}]`);
   }
 
+  // 10. Example votes (20 votes distributed across topics)
+  log('Creating example votes...');
+  const topicsRes = await api('votes/topics-with-counts', 'GET');
+  const topicDocs: { documentId: string; title: string }[] = topicsRes.data || [];
+
+  if (topicDocs.length > 0) {
+    const EXAMPLE_VOTES = [
+      // Topic 0 "Coscienza e IA" — 5 votes (most popular)
+      { email: 'maria.rossi@example.com', topicIdx: 0 },
+      { email: 'luca.bianchi@example.com', topicIdx: 0 },
+      { email: 'anna.verdi@example.com', topicIdx: 0 },
+      { email: 'marco.ferrari@example.com', topicIdx: 0 },
+      { email: 'elena.russo@example.com', topicIdx: 0 },
+      // Topic 1 "Fisica quantistica" — 4 votes
+      { email: 'giovanni.esposito@example.com', topicIdx: 1 },
+      { email: 'francesca.romano@example.com', topicIdx: 1 },
+      { email: 'luca.bianchi@example.com', topicIdx: 1 },
+      { email: 'anna.verdi@example.com', topicIdx: 1 },
+      // Topic 2 "NDE e coscienza" — 3 votes
+      { email: 'paolo.colombo@example.com', topicIdx: 2 },
+      { email: 'maria.rossi@example.com', topicIdx: 2 },
+      { email: 'sara.ricci@example.com', topicIdx: 2 },
+      // Topic 3 "Meditazione" — 2 votes
+      { email: 'elena.russo@example.com', topicIdx: 3 },
+      { email: 'francesca.romano@example.com', topicIdx: 3 },
+      // Topic 4 "Sapere vs Conoscere" — 2 votes
+      { email: 'paolo.colombo@example.com', topicIdx: 4 },
+      { email: 'marco.ferrari@example.com', topicIdx: 4 },
+      // Topic 5 "Libero arbitrio" — 2 votes
+      { email: 'sara.ricci@example.com', topicIdx: 5 },
+      { email: 'giovanni.esposito@example.com', topicIdx: 5 },
+      // Topic 6 "Nousym" — 1 vote
+      { email: 'maria.rossi@example.com', topicIdx: 6 },
+      // Topic 7 "Futuro umanità" — 1 vote
+      { email: 'luca.bianchi@example.com', topicIdx: 7 },
+    ];
+
+    let voteCount = 0;
+    for (const v of EXAMPLE_VOTES) {
+      if (v.topicIdx < topicDocs.length) {
+        try {
+          const url = new URL(`/api/votes/cast`, STRAPI_URL);
+          const res = await fetch(url.toString(), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ topicId: topicDocs[v.topicIdx].documentId, userEmail: v.email }),
+          });
+          if (res.ok) {
+            voteCount++;
+          }
+        } catch {}
+      }
+    }
+    log(`  ✓ ${voteCount} votes created`);
+  } else {
+    log('  ⚠ No topics found, skipping votes');
+  }
+
   log('');
   log('🎉 Seed complete!');
   log('');
@@ -670,6 +731,7 @@ async function seed() {
   log(`  Bio sections: ${BIO_SECTIONS.it.length} × 4 locales`);
   log(`  Topics: ${TOPICS.it.length} × 4 locales`);
   log(`  Single types: 6 × 4 locales`);
+  log(`  Example votes: 20`);
 }
 
 seed().catch((err) => {

@@ -1,3 +1,4 @@
+import CosmographyHero from '@/components/cosmography/CosmographyHero';
 import PurposeSection from '@/components/home/PurposeSection';
 import BooksGrid from '@/components/home/BooksGrid';
 import StorySection from '@/components/home/StorySection';
@@ -11,10 +12,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   try { [homeData, books] = await Promise.all([getHomePage(locale), getBooks(locale)]); } catch {}
   return (
     <>
+      <CosmographyHero />
       <PurposeSection data={homeData?.data} />
-      <BooksGrid books={books?.data} />
-      <StorySection data={homeData?.data} />
       <VideoGridPreview data={homeData?.data} />
+      <StorySection data={homeData?.data} />
+      <BooksGrid books={books?.data} />
     </>
   );
 }

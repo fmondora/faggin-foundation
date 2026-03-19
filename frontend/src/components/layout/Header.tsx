@@ -6,7 +6,7 @@ import { useAuth } from '@/components/auth/AuthProvider';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 import LoginModal from '@/components/auth/LoginModal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Header() {
@@ -15,6 +15,18 @@ export default function Header() {
   const { user, signOut } = useAuth();
   const [showLogin, setShowLogin] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const isHome = pathname === '/';
+
+  useEffect(() => {
+    if (!isHome) { setScrolled(true); return; }
+    function handleScroll() {
+      setScrolled(window.scrollY > window.innerHeight * 0.8);
+    }
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHome]);
 
   const navItems = [
     { href: '/' as const, label: t('home') },
@@ -26,7 +38,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-nav-bg text-white sticky top-0 z-50">
+      <header className={`${scrolled ? 'bg-nav-bg' : 'bg-transparent'} text-white sticky top-0 z-50 transition-colors duration-300`}>
         <div className="max-w-[1200px] mx-auto px-4 flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/images/logo.svg" alt="Faggin Foundation" width={40} height={40} />

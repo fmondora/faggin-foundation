@@ -151,3 +151,13 @@ export interface SeoData {
   metaDescription?: string;
   shareImage?: StrapiImage;
 }
+
+export interface Concept {
+  documentId: string;
+  name: string;
+  space: 'C' | 'I' | 'F';
+  shortDescription: string;
+  video?: Video;
+  deepLinkPage?: string;
+  sortOrder: number;
+}

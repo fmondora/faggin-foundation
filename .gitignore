@@ -14,6 +14,6 @@ strapi/.strapi/
 voting-service/node_modules/
 *.log
 .DS_Store
-data/
+/data/
 package-lock.json
 .claude/ralph-loop.local.md

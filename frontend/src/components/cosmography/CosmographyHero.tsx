@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Concept } from '@/types/strapi';
 import { FALLBACK_CONCEPTS, SPACE_COLORS, SPACE_LABELS, type OntologicalSpace } from '@/data/concepts';
@@ -13,14 +13,29 @@ interface CosmographyHeroProps {
 }
 
 const SPACES: OntologicalSpace[] = ['F', 'I', 'C'];
-const RING_RADII = { F: 220, I: 150, C: 80 };
+const BASE_RADII = { F: 220, I: 150, C: 80 };
 const CENTER = { x: 400, y: 350 };
 const SVG_SIZE = { width: 800, height: 700 };
+
+function useWindowSize() {
+  const [size, setSize] = useState({ width: 1200, height: 800 });
+  useEffect(() => {
+    function update() { setSize({ width: window.innerWidth, height: window.innerHeight }); }
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+  return size;
+}
 
 export default function CosmographyHero({ concepts }: CosmographyHeroProps) {
   const allConcepts = concepts?.length ? concepts : FALLBACK_CONCEPTS;
   const [activeSpace, setActiveSpace] = useState<OntologicalSpace | null>(null);
   const [selectedConcept, setSelectedConcept] = useState<Concept | null>(null);
+  const size = useWindowSize();
+  const scale = Math.min(size.width / 800, 1);
+  const radii = { F: BASE_RADII.F * scale, I: BASE_RADII.I * scale, C: BASE_RADII.C * scale };
+  const particleCount = size.width < 768 ? 30 : 60;
 
   const handleActivate = useCallback((space: OntologicalSpace) => {
     setActiveSpace(space);
@@ -38,9 +53,10 @@ export default function CosmographyHero({ concepts }: CosmographyHeroProps) {
     >
       {/* Particles */}
       <SeityParticles
-        width={typeof window !== 'undefined' ? window.innerWidth : 1200}
-        height={typeof window !== 'undefined' ? window.innerHeight : 800}
+        width={size.width}
+        height={size.height}
         activeSpace={activeSpace}
+        particleCount={particleCount}
       />
 
       {/* Quote */}
@@ -64,7 +80,7 @@ export default function CosmographyHero({ concepts }: CosmographyHeroProps) {
           <OntologicalRing
             key={space}
             space={space}
-            radius={RING_RADII[space]}
+            radius={radii[space]}
             cx={CENTER.x}
             cy={CENTER.y}
             color={SPACE_COLORS[space].primary}

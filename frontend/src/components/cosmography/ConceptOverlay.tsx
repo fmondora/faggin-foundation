@@ -68,6 +68,18 @@ export default function ConceptOverlay({ concept, onClose }: ConceptOverlayProps
           {concept.shortDescription}
         </p>
 
+        {concept.quote && (
+          <blockquote
+            className="border-l-2 pl-4 mb-6 text-white/60 italic leading-relaxed"
+            style={{ borderColor: color }}
+          >
+            &ldquo;{concept.quote}&rdquo;
+            <footer className="mt-2 text-sm not-italic text-white/40">
+              — Federico Faggin, <cite>Oltre l&apos;invisibile</cite>
+            </footer>
+          </blockquote>
+        )}
+
         {videoUrl && (
           <div className="aspect-video mb-6 rounded overflow-hidden">
             <iframe

@@ -157,6 +157,7 @@ export interface Concept {
   name: string;
   space: 'C' | 'I' | 'F';
   shortDescription: string;
+  quote?: string;
   video?: Video;
   deepLinkPage?: string;
   sortOrder: number;

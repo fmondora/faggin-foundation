@@ -24,7 +24,8 @@
     "past": "Eventos pasados",
     "noUpcoming": "Nuevos eventos próximamente. Suscríbete al boletín para estar al día.",
     "watch": "Ver →",
-    "subtitle": "Conferencias, festivales y encuentros en los que Federico Faggin ha participado o participará."
+    "subtitle": "Conferencias, festivales y encuentros en los que Federico Faggin ha participado o participará.",
+    "noEvents": "No hay eventos disponibles en este momento."
   },
   "about": {
     "awards": "Premios",
@@ -150,19 +151,39 @@
   "biography": {
     "title": "Biografía",
     "subtitle": "La vida y el recorrido de Federico Faggin",
-    "profile": "Perfil",
-    "timeline": "Cronología",
-    "awards": "Premios",
-    "photos": "Fotos"
+    "intro": "Federico Faggin (nacido el 1 de diciembre de 1941 en Vicenza, Italia) es un físico, inventor y empresario estadounidense naturalizado. Es conocido por diseñar el primer microprocesador comercial, el Intel 4004, y por su investigación pionera sobre la naturaleza de la conciencia.",
+    "timelineTitle": "Cronología",
+    "timeline": {
+      "1941": "Nace en Vicenza, Italia",
+      "1965": "Licenciatura en Física en la Universidad de Padua",
+      "1968": "Desarrolla la tecnología MOS Silicon Gate en Fairchild Semiconductor",
+      "1971": "Diseña el primer microprocesador comercial, Intel 4004",
+      "1974": "Co-funda Zilog y crea el microprocesador Z80",
+      "1986": "Funda Synaptics, pionero en touchpads y pantallas táctiles",
+      "2010": "Recibe la National Medal of Technology and Innovation del Presidente Obama",
+      "2011": "Funda la Federico and Elvia Faggin Foundation para la investigación sobre la conciencia"
+    },
+    "awardsTitle": "Premios",
+    "awards": {
+      "medal": "National Medal of Technology and Innovation (2010)",
+      "marconi": "Marconi Society Lifetime Achievement Award (2013)",
+      "bellLabs": "Kyoto Prize in Advanced Technology (1997)",
+      "ieee": "IEEE W. Wallace McDowell Award"
+    }
   },
   "publications": {
     "title": "Publicaciones",
     "subtitle": "Libros, artículos y contribuciones científicas",
-    "books": "Libros",
-    "articles": "Artículos",
-    "glossary": "Glosario",
-    "download": "Descargar",
-    "cite": "Citar"
+    "booksTitle": "Libros",
+    "silicioTitle": "Silicio",
+    "silicioYear": "2019",
+    "silicioDesc": "De la invención del microprocesador a la nueva ciencia de la conciencia. La autobiografía que cuenta el camino desde la ingeniería hasta la investigación sobre la conciencia.",
+    "irriducibileTitle": "Irreducible",
+    "irriducibileYear": "2024 (ES)",
+    "irriducibileDesc": "Conciencia, vida y computadoras. Una visión revolucionaria que desafía el materialismo y propone la conciencia como fundamento de la realidad.",
+    "oltreTitle": "Oltre l'Invisibile",
+    "oltreYear": "2024",
+    "oltreDesc": "La síntesis más reciente del pensamiento de Faggin: el modelo Nousym, el Uno, los tres espacios ontológicos y el papel de la conciencia en el universo. (Solo en italiano/alemán)"
   },
   "media": {
     "title": "Medios",
@@ -180,8 +201,12 @@
   "aboutUs": {
     "title": "Quiénes somos",
     "subtitle": "La Faggin Foundation y su misión",
-    "team": "Equipo",
-    "mission": "Misión"
+    "missionTitle": "Misión",
+    "missionText": "La Federico and Elvia Faggin Foundation es una organización sin fines de lucro fundada en 2011 para promover la investigación científica sobre la naturaleza de la conciencia. La fundación sostiene que la conciencia es una propiedad fundamental de la realidad, no un subproducto de la actividad cerebral, y financia estudios teóricos y experimentales para verificar esta hipótesis.",
+    "visionTitle": "Visión",
+    "visionText": "Un mundo donde la ciencia reconoce la conciencia como el fundamento de la existencia, uniendo rigor científico y comprensión interior para una visión más completa de la realidad.",
+    "founderTitle": "Fundador",
+    "founderText": "Federico Faggin, físico e inventor del microprocesador, después de décadas de éxito en la tecnología ha dedicado su vida a comprender la conciencia. Su experiencia transformadora de 1990 lo llevó a desafiar el paradigma materialista y proponer una nueva teoría de la realidad."
   },
   "contact": {
     "title": "Contacto",

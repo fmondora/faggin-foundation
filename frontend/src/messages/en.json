@@ -24,7 +24,8 @@
     "past": "Past events",
     "noUpcoming": "New events coming soon. Subscribe to the newsletter to stay updated.",
     "watch": "Watch →",
-    "subtitle": "Conferences, festivals and events that Federico Faggin has attended or will attend."
+    "subtitle": "Conferences, festivals and events that Federico Faggin has attended or will attend.",
+    "noEvents": "No events available at the moment."
   },
   "about": {
     "awards": "Awards",
@@ -150,19 +151,39 @@
   "biography": {
     "title": "Biography",
     "subtitle": "The life and journey of Federico Faggin",
-    "profile": "Profile",
-    "timeline": "Timeline",
-    "awards": "Awards",
-    "photos": "Photos"
+    "intro": "Federico Faggin (born December 1, 1941 in Vicenza, Italy) is a physicist, inventor and naturalized American entrepreneur. He is known for designing the first commercial microprocessor, the Intel 4004, and for his pioneering research on the nature of consciousness.",
+    "timelineTitle": "Timeline",
+    "timeline": {
+      "1941": "Born in Vicenza, Italy",
+      "1965": "Physics degree from the University of Padua",
+      "1968": "Develops MOS Silicon Gate technology at Fairchild Semiconductor",
+      "1971": "Designs the first commercial microprocessor, Intel 4004",
+      "1974": "Co-founds Zilog and creates the Z80 microprocessor",
+      "1986": "Founds Synaptics, pioneering touchpads and touchscreens",
+      "2010": "Receives the National Medal of Technology and Innovation from President Obama",
+      "2011": "Founds the Federico and Elvia Faggin Foundation for consciousness research"
+    },
+    "awardsTitle": "Awards",
+    "awards": {
+      "medal": "National Medal of Technology and Innovation (2010)",
+      "marconi": "Marconi Society Lifetime Achievement Award (2013)",
+      "bellLabs": "Kyoto Prize in Advanced Technology (1997)",
+      "ieee": "IEEE W. Wallace McDowell Award"
+    }
   },
   "publications": {
     "title": "Publications",
     "subtitle": "Books, articles and scientific contributions",
-    "books": "Books",
-    "articles": "Articles",
-    "glossary": "Glossary",
-    "download": "Download",
-    "cite": "Cite"
+    "booksTitle": "Books",
+    "silicioTitle": "Silicon",
+    "silicioYear": "2021 (EN)",
+    "silicioDesc": "From the invention of the microprocessor to the new science of awareness. The autobiography that tells the journey from engineering to consciousness research.",
+    "irriducibileTitle": "Irreducible",
+    "irriducibileYear": "2024 (EN)",
+    "irriducibileDesc": "Consciousness, life and computers. A revolutionary vision that challenges materialism and proposes consciousness as the foundation of reality.",
+    "oltreTitle": "Oltre l'Invisibile",
+    "oltreYear": "2024",
+    "oltreDesc": "Faggin's most recent synthesis: the Nousym model, the One, the three ontological spaces and the role of consciousness in the universe. (Italian/German only)"
   },
   "media": {
     "title": "Media",
@@ -180,8 +201,12 @@
   "aboutUs": {
     "title": "About us",
     "subtitle": "The Faggin Foundation and its mission",
-    "team": "Team",
-    "mission": "Mission"
+    "missionTitle": "Mission",
+    "missionText": "The Federico and Elvia Faggin Foundation is a nonprofit organization founded in 2011 to promote scientific research on the nature of consciousness. The foundation holds that consciousness is a fundamental property of reality, not a byproduct of brain activity, and funds theoretical and experimental studies to test this hypothesis.",
+    "visionTitle": "Vision",
+    "visionText": "A world where science recognizes consciousness as the foundation of existence, uniting scientific rigor and inner understanding for a more complete view of reality.",
+    "founderTitle": "Founder",
+    "founderText": "Federico Faggin, physicist and inventor of the microprocessor, after decades of success in technology has dedicated his life to understanding consciousness. His transformative experience in 1990 led him to challenge the materialist paradigm and propose a new theory of reality."
   },
   "contact": {
     "title": "Contact",

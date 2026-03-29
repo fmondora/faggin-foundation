@@ -24,7 +24,8 @@
     "past": "Vergangene Veranstaltungen",
     "noUpcoming": "Neue Veranstaltungen folgen in Kürze. Abonnieren Sie den Newsletter.",
     "watch": "Ansehen →",
-    "subtitle": "Konferenzen, Festivals und Veranstaltungen, an denen Federico Faggin teilgenommen hat oder teilnehmen wird."
+    "subtitle": "Konferenzen, Festivals und Veranstaltungen, an denen Federico Faggin teilgenommen hat oder teilnehmen wird.",
+    "noEvents": "Derzeit keine Veranstaltungen verfügbar."
   },
   "about": {
     "awards": "Auszeichnungen",
@@ -150,19 +151,39 @@
   "biography": {
     "title": "Biografie",
     "subtitle": "Das Leben und der Werdegang von Federico Faggin",
-    "profile": "Profil",
-    "timeline": "Zeitleiste",
-    "awards": "Auszeichnungen",
-    "photos": "Fotos"
+    "intro": "Federico Faggin (geboren am 1. Dezember 1941 in Vicenza, Italien) ist ein Physiker, Erfinder und eingebürgerter amerikanischer Unternehmer. Er ist bekannt für den Entwurf des ersten kommerziellen Mikroprozessors, des Intel 4004, und für seine bahnbrechende Forschung über die Natur des Bewusstseins.",
+    "timelineTitle": "Zeitleiste",
+    "timeline": {
+      "1941": "Geburt in Vicenza, Italien",
+      "1965": "Physikstudium an der Universität Padua",
+      "1968": "Entwickelt die MOS-Silicon-Gate-Technologie bei Fairchild Semiconductor",
+      "1971": "Entwirft den ersten kommerziellen Mikroprozessor, Intel 4004",
+      "1974": "Mitgründung von Zilog und Entwicklung des Z80-Mikroprozessors",
+      "1986": "Gründet Synaptics, Pionier für Touchpads und Touchscreens",
+      "2010": "Erhält die National Medal of Technology and Innovation von Präsident Obama",
+      "2011": "Gründet die Federico and Elvia Faggin Foundation für Bewusstseinsforschung"
+    },
+    "awardsTitle": "Auszeichnungen",
+    "awards": {
+      "medal": "National Medal of Technology and Innovation (2010)",
+      "marconi": "Marconi Society Lifetime Achievement Award (2013)",
+      "bellLabs": "Kyoto Prize in Advanced Technology (1997)",
+      "ieee": "IEEE W. Wallace McDowell Award"
+    }
   },
   "publications": {
     "title": "Publikationen",
     "subtitle": "Bücher, Artikel und wissenschaftliche Beiträge",
-    "books": "Bücher",
-    "articles": "Artikel",
-    "glossary": "Glossar",
-    "download": "Herunterladen",
-    "cite": "Zitieren"
+    "booksTitle": "Bücher",
+    "silicioTitle": "Silicio",
+    "silicioYear": "2019",
+    "silicioDesc": "Von der Erfindung des Mikroprozessors zur neuen Wissenschaft des Bewusstseins. Die Autobiografie, die den Weg von der Technik zur Bewusstseinsforschung erzählt.",
+    "irriducibileTitle": "Jenseits des Unsichtbaren",
+    "irriducibileYear": "2024 (DE)",
+    "irriducibileDesc": "Bewusstsein, Leben und Computer. Eine revolutionäre Vision, die den Materialismus herausfordert und das Bewusstsein als Grundlage der Realität vorschlägt.",
+    "oltreTitle": "Jenseits des Unsichtbaren",
+    "oltreYear": "2024 (DE)",
+    "oltreDesc": "Faggins jüngste Synthese: das Nousym-Modell, das Eine, die drei ontologischen Räume und die Rolle des Bewusstseins im Universum."
   },
   "media": {
     "title": "Medien",
@@ -180,8 +201,12 @@
   "aboutUs": {
     "title": "Über uns",
     "subtitle": "Die Faggin Foundation und ihre Mission",
-    "team": "Team",
-    "mission": "Mission"
+    "missionTitle": "Mission",
+    "missionText": "Die Federico and Elvia Faggin Foundation ist eine gemeinnützige Organisation, die 2011 gegründet wurde, um die wissenschaftliche Erforschung der Natur des Bewusstseins zu fördern. Die Stiftung vertritt die Auffassung, dass Bewusstsein eine fundamentale Eigenschaft der Realität ist, kein Nebenprodukt der Gehirnaktivität, und finanziert theoretische und experimentelle Studien zur Überprüfung dieser Hypothese.",
+    "visionTitle": "Vision",
+    "visionText": "Eine Welt, in der die Wissenschaft das Bewusstsein als Grundlage der Existenz anerkennt und wissenschaftliche Strenge mit innerem Verständnis für eine vollständigere Sicht der Realität vereint.",
+    "founderTitle": "Gründer",
+    "founderText": "Federico Faggin, Physiker und Erfinder des Mikroprozessors, hat nach Jahrzehnten des Erfolgs in der Technologie sein Leben dem Verständnis des Bewusstseins gewidmet. Seine transformative Erfahrung im Jahr 1990 führte ihn dazu, das materialistische Paradigma herauszufordern und eine neue Theorie der Realität vorzuschlagen."
   },
   "contact": {
     "title": "Kontakt",

@@ -24,7 +24,8 @@
     "past": "Eventi passati",
     "noUpcoming": "Nuovi eventi in arrivo. Iscriviti alla newsletter per restare aggiornato.",
     "watch": "Guarda →",
-    "subtitle": "Conferenze, festival e incontri a cui Federico Faggin ha partecipato o parteciperà."
+    "subtitle": "Conferenze, festival e incontri a cui Federico Faggin ha partecipato o parteciperà.",
+    "noEvents": "Nessun evento disponibile al momento."
   },
   "about": {
     "awards": "Riconoscimenti",
@@ -150,19 +151,39 @@
   "biography": {
     "title": "Biografia",
     "subtitle": "La vita e il percorso di Federico Faggin",
-    "profile": "Profilo",
-    "timeline": "Cronologia",
-    "awards": "Riconoscimenti",
-    "photos": "Foto"
+    "intro": "Federico Faggin (nato il 1 dicembre 1941 a Vicenza, Italia) è un fisico, inventore e imprenditore naturalizzato statunitense. È noto per aver progettato il primo microprocessore commerciale, l'Intel 4004, e per la sua ricerca pionieristica sulla natura della coscienza.",
+    "timelineTitle": "Cronologia",
+    "timeline": {
+      "1941": "Nasce a Vicenza, Italia",
+      "1965": "Laurea in Fisica all'Università di Padova",
+      "1968": "Sviluppa la tecnologia MOS Silicon Gate alla Fairchild Semiconductor",
+      "1971": "Progetta il primo microprocessore commerciale, Intel 4004",
+      "1974": "Co-fonda Zilog e crea il microprocessore Z80",
+      "1986": "Fonda Synaptics, pioniere dei touchpad e touchscreen",
+      "2010": "Riceve la National Medal of Technology and Innovation dal Presidente Obama",
+      "2011": "Fonda la Federico and Elvia Faggin Foundation per la ricerca sulla coscienza"
+    },
+    "awardsTitle": "Riconoscimenti",
+    "awards": {
+      "medal": "National Medal of Technology and Innovation (2010)",
+      "marconi": "Marconi Society Lifetime Achievement Award (2013)",
+      "bellLabs": "Kyoto Prize in Advanced Technology (1997)",
+      "ieee": "IEEE W. Wallace McDowell Award"
+    }
   },
   "publications": {
     "title": "Pubblicazioni",
     "subtitle": "Libri, articoli e contributi scientifici",
-    "books": "Libri",
-    "articles": "Articoli",
-    "glossary": "Glossario",
-    "download": "Scarica",
-    "cite": "Cita"
+    "booksTitle": "Libri",
+    "silicioTitle": "Silicio",
+    "silicioYear": "2019",
+    "silicioDesc": "Dall'invenzione del microprocessore alla nuova scienza della consapevolezza. L'autobiografia che racconta il percorso dall'ingegneria alla ricerca sulla coscienza.",
+    "irriducibileTitle": "Irriducibile",
+    "irriducibileYear": "2022",
+    "irriducibileDesc": "La coscienza, la vita e i computer. Una visione rivoluzionaria che sfida il materialismo e propone la coscienza come fondamento della realtà.",
+    "oltreTitle": "Oltre l'Invisibile",
+    "oltreYear": "2024",
+    "oltreDesc": "La sintesi più recente del pensiero di Faggin: il modello Nousym, l'Uno, i tre spazi ontologici e il ruolo della coscienza nell'universo."
   },
   "media": {
     "title": "Media",
@@ -180,8 +201,12 @@
   "aboutUs": {
     "title": "Chi siamo",
     "subtitle": "La Faggin Foundation e la sua missione",
-    "team": "Team",
-    "mission": "Missione"
+    "missionTitle": "Missione",
+    "missionText": "La Federico and Elvia Faggin Foundation è un'organizzazione no-profit fondata nel 2011 con lo scopo di promuovere la ricerca scientifica sulla natura della coscienza. La fondazione sostiene che la coscienza è una proprietà fondamentale della realtà, non un sottoprodotto dell'attività cerebrale, e finanzia studi teorici e sperimentali per verificare questa ipotesi.",
+    "visionTitle": "Visione",
+    "visionText": "Un mondo in cui la scienza riconosce la coscienza come il fondamento dell'esistenza, unendo rigore scientifico e comprensione interiore per una visione più completa della realtà.",
+    "founderTitle": "Fondatore",
+    "founderText": "Federico Faggin, fisico e inventore del microprocessore, dopo decenni di successi nella tecnologia ha dedicato la sua vita alla comprensione della coscienza. La sua esperienza trasformativa del 1990 lo ha portato a sfidare il paradigma materialista e a proporre una nuova teoria della realtà."
   },
   "contact": {
     "title": "Contatti",

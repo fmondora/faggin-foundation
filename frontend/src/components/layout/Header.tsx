@@ -6,27 +6,17 @@ import { useAuth } from '@/components/auth/AuthProvider';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 import LoginModal from '@/components/auth/LoginModal';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Header() {
   const t = useTranslations('nav');
+  const tChat = useTranslations();
   const pathname = usePathname();
   const { user, signOut } = useAuth();
   const [showLogin, setShowLogin] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const isHome = pathname === '/';
-
-  useEffect(() => {
-    if (!isHome) { setScrolled(true); return; }
-    function handleScroll() {
-      setScrolled(window.scrollY > window.innerHeight * 0.8);
-    }
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHome]);
+  const [scrolled] = useState(true);
 
   const navItems = [
     { href: '/' as const, label: t('home') },
@@ -52,6 +42,15 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
+            <Link
+              href={'/prototypes/chat' as any}
+              className="hidden md:flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full border border-[#F5A623]/30 hover:border-[#F5A623]/60 hover:bg-[#F5A623]/10 transition-all"
+              style={{ color: '#F5A623' }}
+            >
+              <span className="text-xs">◉</span>
+              {tChat('nav_chat')}
+              <span className="text-[10px] opacity-50 ml-0.5">AI</span>
+            </Link>
             <LanguageSwitcher />
             {user ? (
               <button onClick={() => signOut()} className="text-sm text-white/90 hover:text-white transition-colors">

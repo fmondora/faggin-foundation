@@ -61,6 +61,70 @@
     "checkEmail": "Überprüfen Sie Ihre E-Mail für den Anmeldelink.",
     "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
   },
+  "chat": {
+    "title": "Federico Faggin",
+    "subtitle": "Physiker, Erfinder, Bewusstseinsforscher",
+    "prototype": "Prototyp",
+    "placeholder": "Fragen Sie Federico...",
+    "send": "Senden",
+    "exploreLabel": "Ein Thema erkunden",
+    "disclaimer": "Prototyp mit simulierten Antworten basierend auf Federico Faggins Büchern. Die endgültige Version wird ein KI-Modell verwenden, das auf seinen Texten trainiert wurde.",
+    "welcome": "Willkommen. Ich bin Federico Faggin. Ich habe mein Leben zwei großen Leidenschaften gewidmet: der Erschaffung des Mikroprozessors und dem Verständnis des Bewusstseins.\n\nHeute weiß ich, dass wir keine Maschinen sind. Wir sind viel mehr.\n\nWas möchten Sie gemeinsam erkunden?",
+    "topics": {
+      "consciousness": "Bewusstsein",
+      "ai": "KI und Menschheit",
+      "freeWill": "Willensfreiheit",
+      "awakening": "Das Erwachen",
+      "scienceSpirit": "Wissenschaft und Geist",
+      "meaning": "Sinn des Lebens"
+    },
+    "questions": {
+      "consciousness": "Was ist Bewusstsein für Sie, Federico?",
+      "ai": "Kann künstliche Intelligenz jemals bewusst sein?",
+      "freeWill": "Wie vereinbaren Sie Willensfreiheit mit der Physik?",
+      "awakening": "Erzählen Sie mir von Ihrer Erfahrung am Lake Tahoe.",
+      "scienceSpirit": "Wie kommen Wissenschaft und Spiritualität zusammen?",
+      "meaning": "Was ist der Sinn des Lebens nach Nousym?"
+    },
+    "responses": {
+      "consciousness": "Bewusstsein ist die Fähigkeit des Einen, sich selbst zu erkennen. Es ist kein Produkt des Gehirns — es ist die Grundlage der Existenz selbst. Alles, was existiert, besteht aus Bewusstsein. Das Gehirn erzeugt kein Bewusstsein, so wie ein Radio keine Musik erzeugt. Das Gehirn ist das Instrument, das das Bewusstsein nutzt, um mit der physischen Welt zu interagieren.\n\nQualia — die Empfindungen und Gefühle, die wir erleben — sind die Art, wie das Bewusstsein seine Selbsterkenntnis erfährt. Sie sind privat, nicht übertragbar, genau wie reine Quantenzustände.",
+      "ai": "Absolut nicht. KI manipuliert Symbole, ohne deren Bedeutung zu verstehen. Das, was keine Intelligenz ist, als \\\"Intelligenz\\\" zu bezeichnen, ist dieselbe Täuschung wie das, was bloß ein bedeutungsloses Symbol ist, als \\\"Information\\\" zu bezeichnen.\n\nWir haben drei zusätzliche Gänge im Vergleich zur KI: unser Quantengehirn, das Ego-Bewusstsein und das Seity-Bewusstsein. KI verhält sich zum Geist wie Kernenergie zum Körper: eine immense Kraft, die Ethik erfordert.",
+      "freeWill": "Die Willensfreiheit ist die Fähigkeit des Einen, seine eigene Selbsterkenntnis zu lenken. Sie ist keine Illusion — sie ist eine fundamentale Eigenschaft der Realität, untrennbar mit dem Bewusstsein verbunden.\n\nDie Willensfreiheit hat dieselben Eigenschaften wie der Kollaps der Wellenfunktion. Wenn eine Seity eine Wahl trifft, ist das kein zufälliges Ereignis: Es ist ein Akt der Willensfreiheit, der einem Außenstehenden zufällig erscheint.",
+      "awakening": "Es war die Weihnachtsnacht 1990. Ich wachte gegen Mitternacht auf, weil ich Durst hatte. Zurück im Bett spürte ich plötzlich einen mächtigen Energiestrahl aus meiner Brust strömen. Es war ein weißes, funkelndes Licht aus Liebe, Freude und Frieden — eine Liebe so mächtig, wie ich sie mir nie hätte vorstellen können.\n\nDie Quelle dieser Liebe war ich selbst. Das Licht breitete sich aus und erfüllte den gesamten Raum. Ich war kein vom Rest der Welt getrennter Körper mehr: Ich war ein Blickpunkt des Ganzen, durch den das Ganze sich selbst erkennt.",
+      "scienceSpirit": "Zu lange haben sich Wissenschaft und Spiritualität misstrauisch betrachtet. Ich habe Nousym genannt — von nous, Intellekt, und sym, Symbol — die Disziplin, die sie vereint.\n\nWenn wir denken, nur das \\\"Wie\\\" sei wichtig, löschen wir die Spiritualität aus. Wenn wir denken, nur das \\\"Warum\\\" sei wichtig, löschen wir die Wissenschaft aus. Was ich vorschlage, ermöglicht es, beide Bedürfnisse zu vereinen.",
+      "meaning": "Der grundlegende Zweck des Einen — und damit jedes Einzelnen von uns — ist die Selbsterkenntnis. In dieser Existenz können wir durch Erfahrung bestimmte Aspekte von uns selbst erkennen, die sich nur unter den besonderen Umständen dieses Lebens manifestieren können.\n\nWir sind Licht, wir müssen nur die Augen öffnen.",
+      "default": "Das ist eine tiefgründige Frage. In meiner Vision ist das Bewusstsein die Grundlage von allem, was existiert. Wir sind keine Maschinen — wir sind Seitys, bewusste Wesen, die in einer Realität existieren, die weiter ist als Raum und Zeit."
+    },
+    "keywords": {
+      "consciousness": "bewusst",
+      "ai": "intelligen,ki,künstlich",
+      "freeWill": "frei,willen",
+      "awakening": "erwach,tahoe,erfahrung",
+      "scienceSpirit": "wissenschaft+spirit",
+      "meaning": "sinn,zweck,nousym"
+    }
+  },
+  "cosmo": {
+    "loading": "Kosmographie wird geladen...",
+    "hint": "Ziehen zum Erkunden · Scrollen zum Zoomen · Klicke auf ein Konzept",
+    "spaceC": "Bewusstsein",
+    "spaceI": "Information",
+    "spaceF": "Physisch",
+    "watchVideo": "Video ansehen",
+    "quotes": [
+      "Wir sind Licht, wir müssen nur die Augen öffnen.",
+      "Das Größere kann nicht aus dem Geringeren entstehen.",
+      "Bewusstsein ist kein Produkt der Materie. Es ist die Grundlage der Existenz.",
+      "Die Zukunft ist offen, weil sie noch nicht bestimmt ist.",
+      "Wissenschaft und Spiritualität sind eine einzige Disziplin.",
+      "Ich war kein vom Rest der Welt getrennter Körper mehr. Ich war ein Blickpunkt des Ganzen.",
+      "Das Warum der Warums ist die Suche nach dem Sinn dessen, wer wir sind.",
+      "Jedes Mal, wenn ich gehandelt habe, bin ich gewachsen.",
+      "Die Lösung kann nur von innen kommen.",
+      "Das Wesen der Realität ist eine Energie, die sich selbst kennt."
+    ]
+  },
+  "nav_chat": "Sprich mit Federico",
   "notFound": {
     "title": "404",
     "message": "Seite nicht gefunden"

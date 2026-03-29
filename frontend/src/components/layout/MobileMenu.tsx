@@ -13,6 +13,7 @@ interface MobileMenuProps {
 export default function MobileMenu({ open, onClose, navItems, onLoginClick }: MobileMenuProps) {
   const pathname = usePathname();
   const t = useTranslations('nav');
+  const tChat = useTranslations();
   const { user, signOut } = useAuth();
   if (!open) return null;
 
@@ -31,6 +32,16 @@ export default function MobileMenu({ open, onClose, navItems, onLoginClick }: Mo
               {item.label}
             </Link>
           ))}
+          <Link
+            href={'/prototypes/chat' as any}
+            onClick={onClose}
+            className="flex items-center gap-2 text-lg"
+            style={{ color: '#F5A623' }}
+          >
+            <span className="text-sm">◉</span>
+            {tChat('nav_chat')}
+            <span className="text-xs opacity-50">AI</span>
+          </Link>
           <hr className="border-white/20 my-2" />
           {user ? (
             <button onClick={() => { signOut(); onClose(); }} className="text-left text-lg text-white/80">

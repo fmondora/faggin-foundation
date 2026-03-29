@@ -7,6 +7,6 @@ const CosmographyScene3D = dynamic(
   { ssr: false },
 );
 
-export default function HomePage() {
+export default function Cosmo3DPrototype() {
   return <CosmographyScene3D />;
 }

@@ -1,0 +1,252 @@
+{
+  "c1": {
+    "name": "Qualia",
+    "shortDescription": "Los qualia son las sensaciones y sentimientos con los que la conciencia experimenta la información que viene de fuera y la comprensión y el significado que vienen de dentro. Son privados e intransferibles, como los estados cuánticos puros.",
+    "quote": "Los qualia no son teoremas ni algoritmos: son los portadores de significado. La conciencia nos permite también saber que sabemos y saber que no sabemos."
+  },
+  "c2": {
+    "name": "Libre albedrío",
+    "shortDescription": "La capacidad de Uno de dirigir su propio conocimiento de sí. Es una propiedad fundamental irreducible que existe junto con la conciencia y explica la indeterminación cuántica.",
+    "quote": "El libre albedrío nos asegura que el futuro está abierto porque aún no está determinado. Ni siquiera Uno puede conocer su propio futuro, y mucho menos nosotros."
+  },
+  "c3": {
+    "name": "Uno",
+    "shortDescription": "La totalidad de lo que existe: dinámico, holístico, que quiere conocerse a sí mismo. Genera las seity como sus propios puntos de vista. La realidad más profunda de Uno está organizada holográficamente, porque cada parte contiene el potencial del Todo.",
+    "quote": "Concibo una UC como una parte-todo de Uno, porque tiene su mismo potencial cognitivo y es una de sus innumerables partes."
+  },
+  "c4": {
+    "name": "Postulado del Ser",
+    "shortDescription": "El fundamento de Nousym. Afirma la existencia de un Todo holístico y dinámico dotado de conciencia y libre albedrío como propiedades irreducibles. Es autoevidente porque la evidencia proviene de la conciencia misma.",
+    "quote": "El nuevo postulado del Ser me permite definir la conciencia como la capacidad de Uno de conocerse a sí mismo y el libre albedrío como la capacidad de Uno de dirigir su propio conocimiento de sí."
+  },
+  "c5": {
+    "name": "Seity",
+    "shortDescription": "Campos cuánticos conscientes que son las partes-todo de Uno. Cada seity tiene conciencia y libre albedrío y genera la realidad física como su manifestación exterior. El término proviene del inglés antiguo e indica la esencia de una entidad.",
+    "quote": "La consecuencia lógica del postulado del Ser es que los campos cuánticos de la física deben tener conciencia y libre albedrío. He llamado a estos campos y sus combinaciones seity."
+  },
+  "c6": {
+    "name": "Ego",
+    "shortDescription": "La parte de la psique que se identifica con el cuerpo y cree estar separada del todo. El ego es necesario para tener experiencia en el mundo físico, pero se convierte en un obstáculo cuando domina impidiendo el acceso a la dimensión más profunda de la conciencia.",
+    "quote": "El ego es esa parte de nosotros que se identifica con nuestro cuerpo y nos hace sentir separados de los demás y del resto del mundo."
+  },
+  "c7": {
+    "name": "Unidad de Conciencia (UC)",
+    "shortDescription": "Las partes-todo de Uno que mantienen su mismo potencial cognitivo. Cada UC es como un holograma del Todo: contiene el potencial completo de Uno aun siendo un punto de vista único e irrepetible.",
+    "quote": "Concibo una UC como una parte-todo de Uno, porque tiene su mismo potencial cognitivo y es una de sus innumerables partes."
+  },
+  "c8": {
+    "name": "Autoconciencia",
+    "shortDescription": "La capacidad de saber que se sabe, que distingue la conciencia humana de la de entidades menos complejas. La autoconciencia permite la reflexión sobre uno mismo y el crecimiento interior consciente.",
+    "quote": "La conciencia nos permite también saber que sabemos y saber que no sabemos."
+  },
+  "c9": {
+    "name": "Significado",
+    "shortDescription": "Solo la conciencia puede dar significado a la información. El significado no es reducible a símbolos o algoritmos: requiere una entidad consciente que comprenda. Por eso las máquinas no pueden comprender.",
+    "quote": "El significado es algo que solo una entidad consciente puede dar a la información, porque el significado requiere comprensión, y la comprensión requiere conciencia."
+  },
+  "c10": {
+    "name": "Comprensión",
+    "shortDescription": "La capacidad exclusiva de la conciencia de captar el significado profundo de la experiencia. La comprensión no es cálculo ni procesamiento de datos: es un acto cualitativo irreducible que ninguna máquina puede replicar.",
+    "quote": "La comprensión requiere conciencia. Ninguna computadora podrá jamás comprender, porque la comprensión no es una operación algorítmica."
+  },
+  "c11": {
+    "name": "Amor",
+    "shortDescription": "La fuerza fundamental que mantiene unido al Todo. El amor es la fuerza cohesiva de Uno, lo que conecta cada seity al Todo y permite el conocimiento de sí a través de la relación con el otro.",
+    "quote": "El amor es la fuerza que mantiene unido al Todo. Es la fuerza cohesiva de Uno que se manifiesta como la tendencia de cada parte a retornar al Todo."
+  },
+  "c12": {
+    "name": "Identidad",
+    "shortDescription": "Cada seity tiene una identidad única e irrepetible que es su punto de vista sobre Uno. La identidad no se reduce al cuerpo ni a la mente: es la esencia consciente que persiste más allá de las transformaciones físicas.",
+    "quote": "Cada seity es un punto de vista único e irrepetible de Uno sobre sí mismo."
+  },
+  "c13": {
+    "name": "Agentividad",
+    "shortDescription": "La capacidad de actuar en el mundo de manera autónoma e intencional, que deriva del libre albedrío. La verdadera agentividad requiere conciencia: las máquinas simulan acción pero no tienen verdadera intencionalidad.",
+    "quote": "El libre albedrío es la capacidad de dirigir el propio conocimiento de sí, y esta capacidad se manifiesta como agentividad en el mundo físico."
+  },
+  "c14": {
+    "name": "Despertar",
+    "shortDescription": "El proceso de expansión de la conciencia más allá de los límites del ego. El despertar lleva a reconocer la propia naturaleza como parte-todo de Uno, superando la ilusión de la separación.",
+    "quote": "El propósito de nuestra vida es despertar a nuestra verdadera naturaleza: darnos cuenta de que no somos solo un cuerpo sino que somos mucho más."
+  },
+  "c15": {
+    "name": "Sufrimiento",
+    "shortDescription": "Una señal de la conciencia que indica desalineación entre el ego y nuestra naturaleza profunda. El sufrimiento tiene una función evolutiva: impulsa hacia el crecimiento interior y la superación de los límites del ego.",
+    "quote": "El sufrimiento es una señal que nos advierte de que algo no va bien, de que estamos yendo en la dirección equivocada."
+  },
+  "c16": {
+    "name": "Alegría",
+    "shortDescription": "El estado natural de la conciencia cuando está alineada con su propia esencia. La alegría profunda no depende de condiciones externas sino de la conexión con Uno, a diferencia del placer que es transitorio.",
+    "quote": "La alegría es el estado natural de la conciencia cuando el ego no la obstaculiza."
+  },
+  "c17": {
+    "name": "Intuición",
+    "shortDescription": "Conocimiento directo que no pasa por el razonamiento lógico. La intuición es una forma de comunicación desde la dimensión más profunda de la conciencia, un instrumento de conocimiento que la ciencia materialista desatiende.",
+    "quote": "La intuición es una forma de conocimiento directo que viene de la parte más profunda de nosotros."
+  },
+  "c18": {
+    "name": "Creatividad",
+    "shortDescription": "La capacidad de crear algo genuinamente nuevo, no derivable de lo que existía antes. La verdadera creatividad requiere conciencia y libre albedrío: las máquinas solo pueden recombinar patrones existentes.",
+    "quote": "La verdadera creatividad requiere conciencia y libre albedrío porque implica la creación de algo genuinamente nuevo."
+  },
+  "c19": {
+    "name": "Empatía",
+    "shortDescription": "La capacidad de sentir lo que el otro siente, posibilitada por la conexión profunda entre todas las seity en Uno. La empatía es evidencia directa de la interconexión consciente que trasciende el espacio-tiempo.",
+    "quote": "La empatía es posible porque todos estamos conectados en Uno. Sentir lo que el otro siente es una prueba directa de nuestra interconexión."
+  },
+  "c20": {
+    "name": "Conocimiento de sí",
+    "shortDescription": "El propósito fundamental de Uno y de cada seity. Toda la realidad existe para que Uno pueda conocerse a sí mismo a través de sus innumerables puntos de vista. El conocimiento de sí es el motor de la evolución cósmica.",
+    "quote": "El propósito de la existencia es el conocimiento de sí. Uno quiere conocerse a sí mismo y lo hace a través de sus innumerables partes."
+  },
+  "i1": {
+    "name": "Información cuántica",
+    "shortDescription": "La experiencia consciente tiene las mismas características fundamentales de la información cuántica: imposibilidad de clonación, privacidad, indeterminación. La teoría QIP demuestra cómo la información cuántica es la representación matemática de los qualia.",
+    "quote": "La existencia del mundo cuántico nos permite comprender que la conciencia debe ser un fenómeno cuántico, porque la experiencia consciente tiene las mismas características fundamentales de la información cuántica."
+  },
+  "i2": {
+    "name": "Entrelazamiento",
+    "shortDescription": "El holismo cuántico que no puede ser explicado por la física clásica. Revela correlaciones no-locales instantáneas y la existencia de una realidad más profunda: el espacio-I, donde las seity están interconectadas.",
+    "quote": "Todos los campos están conectados desde dentro a través de Uno, y su interconexión se manifiesta como esa propiedad de la física cuántica que llamamos entrelazamiento."
+  },
+  "i3": {
+    "name": "Nousym",
+    "shortDescription": "La nueva disciplina que une ciencia y espiritualidad: nous (intelecto) y sym (símbolo). Reconoce la conciencia como propiedad primaria e irreducible, no emergente de la materia.",
+    "quote": "Mi objetivo desde 2008 en adelante ha sido unir ciencia y espiritualidad en una nueva disciplina, Nousym. Nousym afirma que la conciencia y el libre albedrío existen como propiedades fundamentales e irreducibles de Uno."
+  },
+  "i4": {
+    "name": "Símbolos",
+    "shortDescription": "El cuerpo es un símbolo cuántico y clásico hecho de símbolos vivos. Las partículas físicas son el aspecto exterior de la realidad interior de las seity. Para comprender el significado de un símbolo hay que haber vivido una experiencia similar.",
+    "quote": "Nuestro cuerpo es un sistema cuántico y clásico de una complejidad infinitamente mayor que las máquinas y computadoras que hoy sabemos construir. No obstante, el cuerpo es un símbolo cuántico y clásico hecho de símbolos vivos."
+  },
+  "i5": {
+    "name": "Teoría QIP",
+    "shortDescription": "Quantum Information-based Panpsychism: la teoría que identifica la información cuántica como la representación matemática de los qualia. Demuestra que la conciencia no puede ser clásica porque sus propiedades son las de la información cuántica.",
+    "quote": "La teoría QIP propone que los qualia estén representados por estados cuánticos puros, es decir, por la información cuántica."
+  },
+  "i6": {
+    "name": "Marco CIF",
+    "shortDescription": "El framework ontológico que distingue tres espacios: Conciencia (C), Información (I) y Físico (F). El espacio-C es el más fundamental, el espacio-I es el puente, el espacio-F es la manifestación exterior.",
+    "quote": "El marco CIF prevé tres niveles de realidad: el espacio de la conciencia, el espacio de la información y el espacio físico."
+  },
+  "i7": {
+    "name": "Información viva",
+    "shortDescription": "La información portada por las seity, que tiene significado intrínseco a diferencia de la información clásica de las computadoras. La información viva es semántica, no solo sintáctica: lleva consigo comprensión y significado.",
+    "quote": "La información de las seity es información viva, porque es portada por entidades conscientes que le dan significado."
+  },
+  "i8": {
+    "name": "Símbolos vivos",
+    "shortDescription": "Los símbolos que tienen un significado intrínseco porque son manifestaciones de entidades conscientes. A diferencia de los símbolos artificiales (como las palabras), los símbolos vivos llevan en sí el significado de la experiencia que representan.",
+    "quote": "Los símbolos vivos son radicalmente diferentes de los símbolos artificiales como las palabras, porque llevan en sí el significado de la experiencia."
+  },
+  "i9": {
+    "name": "Teorema de no-clonación",
+    "shortDescription": "Uno de los pilares de la mecánica cuántica: es imposible copiar un estado cuántico desconocido. Esto explica por qué los qualia son privados e intransferibles — la experiencia consciente no puede ser duplicada.",
+    "quote": "El teorema de no-clonación de la mecánica cuántica nos dice que es imposible copiar un estado cuántico, y esto es exactamente lo que ocurre con los qualia: no pueden ser transferidos ni copiados."
+  },
+  "i10": {
+    "name": "Teorema de Holevo",
+    "shortDescription": "Establece que un estado cuántico contiene mucha más información de la que se puede extraer con una medición clásica. Explica por qué la comprensión interior es siempre más rica de lo que podemos expresar con palabras.",
+    "quote": "El teorema de Holevo demuestra que de un estado cuántico se puede extraer con una medición clásica solo una pequeña parte de la información que contiene."
+  },
+  "i11": {
+    "name": "Espacio de Hilbert",
+    "shortDescription": "El espacio matemático en el que viven los estados cuánticos. En la visión de Faggin, el espacio de Hilbert es la estructura matemática que describe el espacio-I, el nivel de realidad de la información.",
+    "quote": "El espacio de Hilbert es el espacio matemático donde viven los estados cuánticos, y corresponde a lo que llamo espacio de la información o espacio-I."
+  },
+  "i12": {
+    "name": "Thoughtform",
+    "shortDescription": "Estructuras informacionales en el espacio-I que pueden influir en la realidad física. Los pensamientos e intenciones conscientes crean thoughtform que median entre conciencia y materia.",
+    "quote": "Los pensamientos e intenciones de una seity crean estructuras en el espacio de la información que llamo thoughtform."
+  },
+  "f1": {
+    "name": "Espacio-tiempo",
+    "shortDescription": "No es la realidad fundamental sino que emerge de una realidad más profunda. Existe un espacio-I (información viva) y un espacio-C (conciencia) de los que el espacio-F emerge. Los «cálculos» de la computación cuántica ocurren fuera del espacio-tiempo.",
+    "quote": "Nadie logra entender cómo pueden funcionar las computadoras cuánticas, dado que el cálculo requiere propiedades no-locales que no pueden existir en el espacio-tiempo. Debe existir otra realidad más vasta."
+  },
+  "f2": {
+    "name": "Materia",
+    "shortDescription": "No es fundamental sino manifestación exterior de entidades conscientes. La conciencia es primaria e irreducible, existe antes que la materia. Los campos cuánticos conscientes — las seity — generan la realidad física.",
+    "quote": "La consecuencia lógica del postulado del Ser es que los campos cuánticos de la física deben tener conciencia y libre albedrío. He llamado a estos campos y sus combinaciones seity."
+  },
+  "f3": {
+    "name": "Microprocesador",
+    "shortDescription": "La cumbre de la investigación material de Faggin. Una experiencia extraordinaria invirtió después el horizonte de sus investigaciones, conduciéndolo del mundo exterior de la materia a la exploración del mundo interior de la conciencia.",
+    "quote": "Es esta pasión la que me impulsó a buscar los secretos del mundo material y a crear el primer microprocesador. Más adelante, una experiencia extraordinaria invirtió el horizonte de mis investigaciones."
+  },
+  "f4": {
+    "name": "Física cuántica",
+    "shortDescription": "Las propiedades «extrañas» de la mecánica cuántica — indeterminación, no-localidad, colapso de la función de onda — se explican partiendo de la conciencia. La probabilidad cuántica no es ignorancia sino creación real de nuevos estados.",
+    "quote": "El libre albedrío tiene las mismas propiedades del llamado colapso de la función de onda, un fenómeno cuya interpretación sigue siendo controvertida."
+  },
+  "f5": {
+    "name": "Colapso de la función de onda",
+    "shortDescription": "El momento en que una superposición cuántica se convierte en un estado definido. Faggin lo interpreta como el acto de libre albedrío de una seity: no es un proceso aleatorio sino una elección consciente.",
+    "quote": "El libre albedrío tiene las mismas propiedades del llamado colapso de la función de onda, un fenómeno cuya interpretación sigue siendo controvertida."
+  },
+  "f6": {
+    "name": "Cuerpo",
+    "shortDescription": "El símbolo viviente de la seity en el espacio físico. El cuerpo no es una máquina sino un organismo consciente de complejidad infinitamente superior a cualquier computadora. Es el instrumento a través del cual la seity tiene experiencia en el mundo físico.",
+    "quote": "Nuestro cuerpo es un sistema cuántico y clásico de una complejidad infinitamente mayor que las máquinas y computadoras que hoy sabemos construir."
+  },
+  "f7": {
+    "name": "Cerebro",
+    "shortDescription": "No es la fuente de la conciencia sino un instrumento que la seity usa para interactuar con el mundo físico. El cerebro es como una interfaz entre el espacio-C y el espacio-F, no el generador de la mente.",
+    "quote": "El cerebro no produce la conciencia, así como la radio no produce la música. El cerebro es el instrumento que la conciencia usa para interactuar con el mundo físico."
+  },
+  "f8": {
+    "name": "Determinismo",
+    "shortDescription": "La visión según la cual todo está predeterminado por las leyes físicas. Faggin la rechaza: el libre albedrío y la indeterminación cuántica demuestran que el futuro está abierto y no predeterminado.",
+    "quote": "El libre albedrío nos asegura que el futuro está abierto porque aún no está determinado."
+  },
+  "f9": {
+    "name": "Holismo",
+    "shortDescription": "El principio fundamental por el cual el todo es más que la suma de las partes. El holismo cuántico (entrelazamiento) demuestra que la realidad no es reducible a sus componentes. Uno es el Todo holístico por excelencia.",
+    "quote": "La realidad más profunda de Uno está organizada holográficamente, porque cada parte contiene el potencial del Todo."
+  },
+  "f10": {
+    "name": "Reduccionismo",
+    "shortDescription": "El enfoque científico que explica el todo reduciéndolo a las partes. Faggin lo considera inadecuado para comprender la conciencia y la vida: el reduccionismo funciona para las máquinas pero no para los organismos vivos.",
+    "quote": "El reduccionismo es un método poderoso para estudiar las máquinas, pero es totalmente inadecuado para comprender la vida y la conciencia."
+  },
+  "f11": {
+    "name": "Fisicalismo",
+    "shortDescription": "La doctrina que afirma que todo lo que existe es físico o superviene sobre lo físico. Faggin la rechaza como dogma no demostrado: la conciencia y la información cuántica demuestran la existencia de realidades no-físicas.",
+    "quote": "El fisicalismo es un dogma no demostrado. La conciencia no puede ser explicada por la materia porque la materia es una manifestación de la conciencia, no al revés."
+  },
+  "f12": {
+    "name": "Inteligencia Artificial",
+    "shortDescription": "Las máquinas pueden procesar símbolos pero no comprender su significado. La IA no es y no puede ser consciente porque opera solo con información clásica, no cuántica. Atribuirle conciencia es un error fundamental.",
+    "quote": "Las computadoras manipulan solo símbolos sin comprender su significado. La inteligencia artificial no es inteligente: es un procesamiento mecánico de datos carente de comprensión."
+  },
+  "f13": {
+    "name": "LLM y redes neuronales",
+    "shortDescription": "Los Large Language Models son máquinas estadísticas que manipulan probabilísticamente los tokens sin ninguna comprensión. Pueden imitar el lenguaje humano pero no entienden lo que dicen. La confusión entre imitación y comprensión es peligrosa.",
+    "quote": "Los llamados modelos de lenguaje de gran tamaño no comprenden el lenguaje: producen una imitación estadística extremadamente sofisticada."
+  },
+  "f14": {
+    "name": "Computadora cuántica",
+    "shortDescription": "Demuestra la existencia de una realidad más allá del espacio-tiempo, porque los cálculos cuánticos requieren propiedades no-locales imposibles en el mundo clásico. La computación cuántica es una prueba indirecta del espacio-I.",
+    "quote": "Nadie logra entender cómo pueden funcionar las computadoras cuánticas, dado que el cálculo requiere propiedades no-locales que no pueden existir en el espacio-tiempo."
+  },
+  "f15": {
+    "name": "Muerte y transformación",
+    "shortDescription": "La muerte del cuerpo no es el fin de la seity sino una transformación. La conciencia no es producida por el cerebro y por lo tanto no muere con él. La muerte es un pasaje de un estado de conciencia a otro.",
+    "quote": "La muerte no es el fin sino una transformación. La conciencia no es producida por el cerebro, y por lo tanto no puede morir con el cuerpo."
+  },
+  "f16": {
+    "name": "Experiencias cercanas a la muerte",
+    "shortDescription": "Las ECM (experiencias cercanas a la muerte) proporcionan evidencia empírica de que la conciencia puede existir independientemente del cerebro. Quienes las viven reportan una conciencia expandida, más vívida que la ordinaria.",
+    "quote": "Las experiencias cercanas a la muerte demuestran que la conciencia puede funcionar incluso cuando el cerebro está clínicamente muerto, lo cual prueba que el cerebro no produce la conciencia."
+  },
+  "f17": {
+    "name": "Sueños",
+    "shortDescription": "Los sueños son experiencias conscientes que ocurren fuera del espacio-tiempo físico. Demuestran que la conciencia no necesita del mundo externo para tener experiencias ricas y significativas.",
+    "quote": "En los sueños creamos mundos enteros con nuestros qualia, demostrando que la conciencia no necesita los estímulos del mundo externo para tener experiencia."
+  },
+  "f18": {
+    "name": "Meditación",
+    "shortDescription": "Práctica que permite acceder a estados de conciencia más profundos, silenciando el ego y el ruido mental. La meditación es un instrumento para experimentar directamente la propia naturaleza como parte-todo de Uno.",
+    "quote": "La meditación nos permite ir más allá del ego y experimentar directamente nuestra conexión con el Todo."
+  }
+}

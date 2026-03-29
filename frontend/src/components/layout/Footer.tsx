@@ -35,10 +35,12 @@ export default function Footer() {
             <h4 className="font-bold mb-3">{t('pages')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li><Link href="/" className="hover:text-white">{nav('home')}</Link></li>
-              <li><Link href="/about" className="hover:text-white">{nav('about')}</Link></li>
-              <li><Link href="/video-serie" className="hover:text-white">{nav('video')}</Link></li>
+              <li><Link href="/concetti" className="hover:text-white">{nav('concepts')}</Link></li>
+              <li><Link href="/biografia" className="hover:text-white">{nav('biography')}</Link></li>
+              <li><Link href="/pubblicazioni" className="hover:text-white">{nav('publications')}</Link></li>
               <li><Link href="/eventi" className="hover:text-white">{nav('events')}</Link></li>
-              <li><Link href="/ricerca-e-sviluppo" className="hover:text-white">{nav('research')}</Link></li>
+              <li><Link href="/chi-siamo" className="hover:text-white">{nav('aboutUs')}</Link></li>
+              <li><Link href="/contatti" className="hover:text-white">{nav('contact')}</Link></li>
             </ul>
           </div>
           <div>

@@ -20,10 +20,12 @@ export default function Header() {
 
   const navItems = [
     { href: '/' as const, label: t('home') },
-    { href: '/about' as const, label: t('about') },
-    { href: '/video-serie' as const, label: t('video') },
+    { href: '/concetti' as const, label: t('concepts') },
+    { href: '/biografia' as const, label: t('biography') },
+    { href: '/pubblicazioni' as const, label: t('publications') },
     { href: '/eventi' as const, label: t('events') },
-    { href: '/ricerca-e-sviluppo' as const, label: t('research') },
+    { href: '/news' as const, label: t('news') },
+    { href: '/chi-siamo' as const, label: t('aboutUs') },
   ];
 
   return (

@@ -1,10 +1,14 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Acerca de",
-    "video": "Serie de Videos",
+    "concepts": "Conceptos",
+    "biography": "Biografía",
+    "publications": "Publicaciones",
+    "media": "Medios",
     "events": "Eventos",
-    "research": "Investigación",
+    "news": "Noticias",
+    "aboutUs": "Quiénes somos",
+    "contact": "Contacto",
     "signup": "Registrarse",
     "account": "Cuenta",
     "logout": "Cerrar sesión"
@@ -125,6 +129,80 @@
     ]
   },
   "nav_chat": "Habla con Federico",
+  "concepts": {
+    "title": "Conceptos",
+    "subtitle": "Explora los conceptos fundamentales del pensamiento de Federico Faggin",
+    "searchPlaceholder": "Buscar un concepto...",
+    "noResults": "No se encontraron conceptos",
+    "backToList": "Todos los conceptos",
+    "relatedConcepts": "Conceptos relacionados",
+    "shareButton": "Compartir",
+    "copied": "¡Enlace copiado!",
+    "backToCosmo": "Volver a la cosmografía",
+    "description": "Descripción",
+    "quoteLabel": "Cita",
+    "notFound": "Concepto no encontrado",
+    "notFoundMessage": "El concepto solicitado no existe.",
+    "spaceC": "Conciencia",
+    "spaceI": "Información",
+    "spaceF": "Físico"
+  },
+  "biography": {
+    "title": "Biografía",
+    "subtitle": "La vida y el recorrido de Federico Faggin",
+    "profile": "Perfil",
+    "timeline": "Cronología",
+    "awards": "Premios",
+    "photos": "Fotos"
+  },
+  "publications": {
+    "title": "Publicaciones",
+    "subtitle": "Libros, artículos y contribuciones científicas",
+    "books": "Libros",
+    "articles": "Artículos",
+    "glossary": "Glosario",
+    "download": "Descargar",
+    "cite": "Citar"
+  },
+  "media": {
+    "title": "Medios",
+    "subtitle": "Galería, materiales de prensa y contactos de medios",
+    "gallery": "Galería",
+    "mediaKit": "Media kit",
+    "pressKit": "Dossier de prensa",
+    "pressContact": "Contacto de prensa"
+  },
+  "news": {
+    "title": "Noticias",
+    "subtitle": "Noticias y novedades de la fundación",
+    "comingSoon": "Próximamente"
+  },
+  "aboutUs": {
+    "title": "Quiénes somos",
+    "subtitle": "La Faggin Foundation y su misión",
+    "team": "Equipo",
+    "mission": "Misión"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Escríbenos para cualquier pregunta o colaboración",
+    "name": "Nombre",
+    "email": "Email",
+    "type": "Tipo de solicitud",
+    "typeGeneral": "General",
+    "typeAcademic": "Académico",
+    "typeMedia": "Medios",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Se ha producido un error. Inténtalo de nuevo."
+  },
+  "privacy": {
+    "title": "Privacidad"
+  },
+  "terms": {
+    "title": "Términos y condiciones"
+  },
   "notFound": {
     "title": "404",
     "message": "Página no encontrada"

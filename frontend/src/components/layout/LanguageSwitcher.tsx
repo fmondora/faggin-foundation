@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
   return (
     <div className="flex items-center gap-1">
       {locales.map((loc) => (
-        <button key={loc} onClick={() => router.replace(pathname, { locale: loc })} className={`text-xs px-1.5 py-0.5 rounded transition-colors ${locale === loc ? 'bg-white text-nav-bg font-bold' : 'text-white/70 hover:text-white'}`}>
+        <button key={loc} onClick={() => router.replace(pathname as any, { locale: loc })} className={`text-xs px-1.5 py-0.5 rounded transition-colors ${locale === loc ? 'bg-white text-nav-bg font-bold' : 'text-white/70 hover:text-white'}`}>
           {localeLabels[loc]}
         </button>
       ))}

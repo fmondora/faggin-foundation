@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "concepts": "Concetti",
+    "postulates": "Postulati",
     "biography": "Biografia",
     "publications": "Pubblicazioni",
     "media": "Media",
@@ -66,49 +67,6 @@
     "checkEmail": "Controlla la tua email per il link di accesso.",
     "error": "Si è verificato un errore. Riprova."
   },
-  "chat": {
-    "title": "Federico Faggin",
-    "subtitle": "Fisico, inventore, ricercatore della coscienza",
-    "prototype": "Prototipo",
-    "placeholder": "Chiedi a Federico...",
-    "send": "Invia",
-    "exploreLabel": "Esplora un tema",
-    "disclaimer": "Prototipo con risposte simulate basate sui libri di Federico Faggin. La versione finale utilizzerà un modello AI addestrato sui suoi testi.",
-    "welcome": "Benvenuto. Sono Federico Faggin. Ho dedicato la mia vita a due grandi passioni: creare il microprocessore e comprendere la coscienza.\n\nOggi so che non siamo macchine. Siamo molto di più.\n\nCosa vorresti esplorare insieme?",
-    "topics": {
-      "consciousness": "Coscienza",
-      "ai": "IA e umanità",
-      "freeWill": "Libero arbitrio",
-      "awakening": "Il risveglio",
-      "scienceSpirit": "Scienza e spirito",
-      "meaning": "Senso della vita"
-    },
-    "questions": {
-      "consciousness": "Cos'è la coscienza per te, Federico?",
-      "ai": "L'intelligenza artificiale potrà mai essere cosciente?",
-      "freeWill": "Come si concilia il libero arbitrio con la fisica?",
-      "awakening": "Raccontami della tua esperienza al lago Tahoe.",
-      "scienceSpirit": "Come si uniscono scienza e spiritualità?",
-      "meaning": "Qual è il senso della vita secondo Nousym?"
-    },
-    "responses": {
-      "consciousness": "La coscienza è la capacità di Uno di conoscere se stesso. Non è un prodotto del cervello — è il fondamento stesso dell'esistenza. Tutto ciò che esiste è fatto di coscienza. Il cervello non produce la coscienza, così come la radio non produce la musica. Il cervello è lo strumento che la coscienza usa per interagire con il mondo fisico.\n\nI qualia — le sensazioni e i sentimenti che proviamo — sono il modo in cui la coscienza sperimenta la sua conoscenza di sé. Sono privati, non trasferibili, proprio come gli stati quantistici puri. Nessun computer potrà mai provarli.",
-      "ai": "Assolutamente no. L'IA manipola simboli senza comprenderne il significato. Chiamare \"intelligenza\" ciò che non lo è, è lo stesso inganno che avviene quando si definisce \"informazione\" ciò che è semplicemente un simbolo senza significato.\n\nNoi abbiamo tre marce in più rispetto all'IA: il nostro cervello quantistico, la coscienza dell'ego e la coscienza della seity. L'IA sta alla mente come l'energia nucleare sta al corpo: un potere immenso che richiede etica.",
-      "freeWill": "Il libero arbitrio è la capacità di Uno di dirigere la propria conoscenza di sé. Non è un'illusione — è una proprietà fondamentale della realtà, intrinsecamente legata alla coscienza.\n\nIl libero arbitrio ha le stesse proprietà del collasso della funzione d'onda. Quando una seity fa una scelta, non è un evento casuale: è un atto di libero arbitrio che appare random a chi lo osserva da fuori.",
-      "awakening": "Era la notte di Natale del 1990. Mi svegliai verso mezzanotte perché avevo sete. Tornato a letto, di punto in bianco sentii un fascio di energia potente sgorgare dal mio petto. Era una luce bianca, scintillante, fatta di amore, gioia e pace — un amore così potente come non lo avrei mai potuto immaginare.\n\nLa sorgente di questo amore ero io. La luce si espanse e riempì tutto lo spazio. Non ero più un corpo separato dal mondo: ero un punto di vista del Tutto con cui il Tutto conosce se stesso.",
-      "scienceSpirit": "Per troppo tempo scienza e spiritualità si sono guardate con sospetto. Ho chiamato Nousym — da nous, intelletto, e sym, simbolo — la disciplina che le unisce.\n\nSe pensiamo che solo il \"come\" è importante, cancelliamo la spiritualità. Se pensiamo che solo il \"perché\" è importante, cancelliamo la scienza. Ciò che propongo permette di unire le due esigenze.",
-      "meaning": "Lo scopo fondamentale di Uno — e quindi di ciascuno di noi — è la conoscenza di sé. In questa esistenza possiamo conoscere, sperimentando, certi nostri aspetti che si possono manifestare soltanto nelle particolari circostanze di questa vita.\n\nNoi siamo luce, dobbiamo solo aprire gli occhi.",
-      "default": "Questa è una domanda profonda. Nella mia visione, la coscienza è il fondamento di tutto ciò che esiste. Non siamo macchine — siamo seity, enti coscienti che esistono in una realtà più vasta dello spazio-tempo."
-    },
-    "keywords": {
-      "consciousness": "coscien",
-      "ai": "intelligen,ia,ai",
-      "freeWill": "liber,arbitr",
-      "awakening": "risvegl,tahoe,esperien",
-      "scienceSpirit": "scien+spirit",
-      "meaning": "senso,scopo,nousym"
-    }
-  },
   "cosmo": {
     "loading": "Caricamento cosmografia...",
     "hint": "Trascina per esplorare · Scroll per zoom · Clicca un concetto",
@@ -129,7 +87,6 @@
       "L'essenza della realtà è un'energia che conosce se stessa."
     ]
   },
-  "nav_chat": "Parla con Federico",
   "concepts": {
     "title": "Concetti",
     "subtitle": "Esplora i concetti fondamentali del pensiero di Federico Faggin",

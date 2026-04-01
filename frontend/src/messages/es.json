@@ -2,6 +2,7 @@
   "nav": {
     "home": "Inicio",
     "concepts": "Conceptos",
+    "postulates": "Postulados",
     "biography": "Biografía",
     "publications": "Publicaciones",
     "media": "Medios",
@@ -66,49 +67,6 @@
     "checkEmail": "Revisa tu email para el enlace de acceso.",
     "error": "Se ha producido un error. Inténtalo de nuevo."
   },
-  "chat": {
-    "title": "Federico Faggin",
-    "subtitle": "Físico, inventor, investigador de la conciencia",
-    "prototype": "Prototipo",
-    "placeholder": "Pregunta a Federico...",
-    "send": "Enviar",
-    "exploreLabel": "Explora un tema",
-    "disclaimer": "Prototipo con respuestas simuladas basadas en los libros de Federico Faggin. La versión final utilizará un modelo de IA entrenado con sus textos.",
-    "welcome": "Bienvenido. Soy Federico Faggin. He dedicado mi vida a dos grandes pasiones: crear el microprocesador y comprender la conciencia.\n\nHoy sé que no somos máquinas. Somos mucho más.\n\n¿Qué te gustaría explorar juntos?",
-    "topics": {
-      "consciousness": "Conciencia",
-      "ai": "IA y humanidad",
-      "freeWill": "Libre albedrío",
-      "awakening": "El despertar",
-      "scienceSpirit": "Ciencia y espíritu",
-      "meaning": "Sentido de la vida"
-    },
-    "questions": {
-      "consciousness": "¿Qué es la conciencia para ti, Federico?",
-      "ai": "¿Puede la inteligencia artificial llegar a ser consciente?",
-      "freeWill": "¿Cómo se concilia el libre albedrío con la física?",
-      "awakening": "Cuéntame sobre tu experiencia en el lago Tahoe.",
-      "scienceSpirit": "¿Cómo se unen ciencia y espiritualidad?",
-      "meaning": "¿Cuál es el sentido de la vida según Nousym?"
-    },
-    "responses": {
-      "consciousness": "La conciencia es la capacidad del Uno de conocerse a sí mismo. No es un producto del cerebro — es el fundamento mismo de la existencia. Todo lo que existe está hecho de conciencia. El cerebro no produce la conciencia, así como la radio no produce la música. El cerebro es el instrumento que la conciencia utiliza para interactuar con el mundo físico.\n\nLos qualia — las sensaciones y sentimientos que experimentamos — son la forma en que la conciencia experimenta su autoconocimiento. Son privados, intransferibles, exactamente como los estados cuánticos puros.",
-      "ai": "Absolutamente no. La IA manipula símbolos sin comprender su significado. Llamar \"inteligencia\" a lo que no lo es, es el mismo engaño que llamar \"información\" a lo que es simplemente un símbolo sin significado.\n\nNosotros tenemos tres marchas más que la IA: nuestro cerebro cuántico, la conciencia del ego y la conciencia de la seity. La IA es a la mente lo que la energía nuclear es al cuerpo: un poder inmenso que requiere ética.",
-      "freeWill": "El libre albedrío es la capacidad del Uno de dirigir su propio autoconocimiento. No es una ilusión — es una propiedad fundamental de la realidad, intrínsecamente ligada a la conciencia.\n\nEl libre albedrío tiene las mismas propiedades que el colapso de la función de onda. Cuando una seity hace una elección, no es un evento aleatorio: es un acto de libre albedrío que parece aleatorio para quien lo observa desde fuera.",
-      "awakening": "Era la noche de Navidad de 1990. Me desperté hacia medianoche porque tenía sed. De vuelta en la cama, de repente sentí un haz de energía poderoso brotar de mi pecho. Era una luz blanca, centelleante, hecha de amor, alegría y paz — un amor tan poderoso como nunca lo habría podido imaginar.\n\nLa fuente de este amor era yo. La luz se expandió y llenó todo el espacio. Ya no era un cuerpo separado del mundo: era un punto de vista del Todo con el que el Todo se conoce a sí mismo.",
-      "scienceSpirit": "Durante demasiado tiempo la ciencia y la espiritualidad se han mirado con sospecha. He llamado Nousym — de nous, intelecto, y sym, símbolo — a la disciplina que las une.\n\nSi pensamos que solo el \"cómo\" es importante, cancelamos la espiritualidad. Si pensamos que solo el \"por qué\" es importante, cancelamos la ciencia. Lo que propongo permite unir ambas necesidades.",
-      "meaning": "El propósito fundamental del Uno — y por tanto de cada uno de nosotros — es el autoconocimiento. En esta existencia podemos conocer, experimentando, ciertos aspectos nuestros que solo pueden manifestarse en las circunstancias particulares de esta vida.\n\nSomos luz, solo tenemos que abrir los ojos.",
-      "default": "Es una pregunta profunda. En mi visión, la conciencia es el fundamento de todo lo que existe. No somos máquinas — somos seitys, entes conscientes que existen en una realidad más vasta que el espacio-tiempo."
-    },
-    "keywords": {
-      "consciousness": "concien",
-      "ai": "inteligencia,ia,artificial",
-      "freeWill": "libre,albedrío",
-      "awakening": "despertar,tahoe,experiencia",
-      "scienceSpirit": "ciencia+espíritu",
-      "meaning": "sentido,propósito,nousym"
-    }
-  },
   "cosmo": {
     "loading": "Cargando cosmografía...",
     "hint": "Arrastra para explorar · Scroll para zoom · Haz clic en un concepto",
@@ -129,7 +87,6 @@
       "La esencia de la realidad es una energía que se conoce a sí misma."
     ]
   },
-  "nav_chat": "Habla con Federico",
   "concepts": {
     "title": "Conceptos",
     "subtitle": "Explora los conceptos fundamentales del pensamiento de Federico Faggin",

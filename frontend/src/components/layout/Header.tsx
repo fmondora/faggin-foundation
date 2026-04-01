@@ -11,7 +11,6 @@ import Image from 'next/image';
 
 export default function Header() {
   const t = useTranslations('nav');
-  const tChat = useTranslations();
   const pathname = usePathname();
   const { user, signOut } = useAuth();
   const [showLogin, setShowLogin] = useState(false);
@@ -20,12 +19,10 @@ export default function Header() {
 
   const navItems = [
     { href: '/' as const, label: t('home') },
-    { href: '/concetti' as const, label: t('concepts') },
-    { href: '/biografia' as const, label: t('biography') },
+    { href: '/chi-siamo' as const, label: t('aboutUs') },
+    { href: '/concetti' as const, label: t('postulates') },
     { href: '/pubblicazioni' as const, label: t('publications') },
     { href: '/eventi' as const, label: t('events') },
-    { href: '/news' as const, label: t('news') },
-    { href: '/chi-siamo' as const, label: t('aboutUs') },
   ];
 
   return (
@@ -44,15 +41,6 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <Link
-              href={'/prototypes/chat' as any}
-              className="hidden md:flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full border border-[#F5A623]/30 hover:border-[#F5A623]/60 hover:bg-[#F5A623]/10 transition-all"
-              style={{ color: '#F5A623' }}
-            >
-              <span className="text-xs">◉</span>
-              {tChat('nav_chat')}
-              <span className="text-[10px] opacity-50 ml-0.5">AI</span>
-            </Link>
             <LanguageSwitcher />
             {user ? (
               <button onClick={() => signOut()} className="text-sm text-white/90 hover:text-white transition-colors">

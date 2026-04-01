@@ -8,5 +8,5 @@ const CosmographyScene3D = dynamic(
 );
 
 export default function HomePage() {
-  return <CosmographyScene3D />;
+  return <CosmographyScene3D featured />;
 }

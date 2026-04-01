@@ -78,5 +78,4 @@ export const pathnames = {
   '/prototypes/narrative': '/prototypes/narrative',
   '/prototypes/theoretical': '/prototypes/theoretical',
   '/prototypes/cosmo3d': '/prototypes/cosmo3d',
-  '/prototypes/chat': '/prototypes/chat',
 } as const;

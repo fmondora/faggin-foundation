@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "concepts": "Concepts",
+    "postulates": "Postulates",
     "biography": "Biography",
     "publications": "Publications",
     "media": "Media",
@@ -66,49 +67,6 @@
     "checkEmail": "Check your email for the login link.",
     "error": "An error occurred. Please try again."
   },
-  "chat": {
-    "title": "Federico Faggin",
-    "subtitle": "Physicist, inventor, consciousness researcher",
-    "prototype": "Prototype",
-    "placeholder": "Ask Federico...",
-    "send": "Send",
-    "exploreLabel": "Explore a topic",
-    "disclaimer": "Prototype with simulated responses based on Federico Faggin's books. The final version will use an AI model trained on his texts.",
-    "welcome": "Welcome. I am Federico Faggin. I have dedicated my life to two great passions: creating the microprocessor and understanding consciousness.\n\nToday I know that we are not machines. We are much more.\n\nWhat would you like to explore together?",
-    "topics": {
-      "consciousness": "Consciousness",
-      "ai": "AI and humanity",
-      "freeWill": "Free will",
-      "awakening": "The awakening",
-      "scienceSpirit": "Science and spirit",
-      "meaning": "Meaning of life"
-    },
-    "questions": {
-      "consciousness": "What is consciousness for you, Federico?",
-      "ai": "Can artificial intelligence ever be conscious?",
-      "freeWill": "How do you reconcile free will with physics?",
-      "awakening": "Tell me about your experience at Lake Tahoe.",
-      "scienceSpirit": "How do science and spirituality come together?",
-      "meaning": "What is the meaning of life according to Nousym?"
-    },
-    "responses": {
-      "consciousness": "Consciousness is the capacity of One to know itself. It is not a product of the brain — it is the very foundation of existence. Everything that exists is made of consciousness. The brain does not produce consciousness, just as a radio does not produce music. The brain is the instrument that consciousness uses to interact with the physical world.\n\nQualia — the sensations and feelings we experience — are the way consciousness experiences its self-knowledge. They are private, non-transferable, just like pure quantum states. No computer will ever be able to experience them.",
-      "ai": "Absolutely not. AI manipulates symbols without understanding their meaning. Calling 'intelligence' what is not, is the same deception as calling 'information' what is merely a meaningless symbol.\n\nWe have three extra gears compared to AI: our quantum brain, ego consciousness, and seity consciousness. AI is to the mind what nuclear energy is to the body: an immense power that requires ethics.",
-      "freeWill": "Free will is the capacity of One to direct its own self-knowledge. It is not an illusion — it is a fundamental property of reality, intrinsically linked to consciousness.\n\nFree will has the same properties as the collapse of the wave function. When a seity makes a choice, it is not a random event: it is an act of free will that appears random to an outside observer.",
-      "awakening": "It was Christmas night, 1990. I woke up around midnight because I was thirsty. Back in bed, out of the blue I felt a powerful beam of energy gushing from my chest. It was a white, sparkling light, made of love, joy and peace — a love so powerful I could never have imagined it.\n\nThe source of this love was me. The light expanded and filled all of space. I was no longer a body separate from the world: I was a point of view of the Whole through which the Whole knows itself.",
-      "scienceSpirit": "For too long science and spirituality have looked at each other with suspicion. I have called Nousym — from nous, intellect, and sym, symbol — the discipline that unites them.\n\nIf we think only the 'how' matters, we cancel spirituality. If we think only the 'why' matters, we cancel science. What I propose allows us to unite both needs.",
-      "meaning": "The fundamental purpose of One — and therefore of each of us — is self-knowledge. In this existence we can know, through experience, certain aspects of ourselves that can only manifest in the particular circumstances of this life.\n\nWe are light, we just need to open our eyes.",
-      "default": "That is a profound question. In my vision, consciousness is the foundation of everything that exists. We are not machines — we are seities, conscious entities that exist in a reality vaster than space-time."
-    },
-    "keywords": {
-      "consciousness": "consciou",
-      "ai": "intelligen,ai,artificial",
-      "freeWill": "free,will",
-      "awakening": "awaken,tahoe,experience",
-      "scienceSpirit": "scien+spirit",
-      "meaning": "meaning,purpose,nousym"
-    }
-  },
   "cosmo": {
     "loading": "Loading cosmography...",
     "hint": "Drag to explore · Scroll to zoom · Click a concept",
@@ -129,7 +87,6 @@
       "The essence of reality is an energy that knows itself."
     ]
   },
-  "nav_chat": "Talk to Federico",
   "concepts": {
     "title": "Concepts",
     "subtitle": "Explore the foundational concepts of Federico Faggin's thought",

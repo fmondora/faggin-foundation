@@ -5,11 +5,10 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
-import { Link } from '@/lib/i18n/navigation';
 import type { Concept } from '@/types/strapi';
 import { translateConcepts } from '@/data/concepts-i18n';
 import { SPACE_COLORS } from '@/data/concepts';
-import { buildConceptNodes, type ConceptNode3D } from './data';
+import { buildConceptNodes, buildFeaturedNodes, filterConnections, type ConceptNode3D } from './data';
 import ConceptSphere from './ConceptSphere';
 import ConnectionLines from './ConnectionLines';
 import OrbitRing from './OrbitRing';
@@ -21,10 +20,11 @@ const QUOTE_COUNT = 10;
 
 interface CosmographyScene3DProps {
   concepts?: Concept[];
+  /** Show only featured concepts (sortOrder ≤ 4) with weighted connections */
+  featured?: boolean;
 }
 
-export default function CosmographyScene3D({ concepts }: CosmographyScene3DProps) {
-  const tNav = useTranslations();
+export default function CosmographyScene3D({ concepts, featured = false }: CosmographyScene3DProps) {
   const tCosmo = useTranslations('cosmo');
   const locale = useLocale();
   // Dynamic import of extended concepts + locale translation
@@ -45,7 +45,10 @@ export default function CosmographyScene3D({ concepts }: CosmographyScene3DProps
   }, [locale]);
 
   const allConcepts = concepts || extendedConcepts;
-  const nodes = useMemo(() => allConcepts ? buildConceptNodes(allConcepts) : [], [allConcepts]);
+  const nodes = useMemo(
+    () => allConcepts ? (featured ? buildFeaturedNodes(allConcepts) : buildConceptNodes(allConcepts)) : [],
+    [allConcepts, featured],
+  );
 
   const [selected, setSelected] = useState<ConceptNode3D | null>(null);
   const [hovered, setHovered] = useState<ConceptNode3D | null>(null);
@@ -66,7 +69,12 @@ export default function CosmographyScene3D({ concepts }: CosmographyScene3DProps
     setHovered(node);
   }, []);
 
-  const connections = extendedConnections || [];
+  const connections = useMemo(() => {
+    const all = extendedConnections || [];
+    if (!featured) return all;
+    const nodeIds = new Set(nodes.map(n => n.concept.documentId));
+    return filterConnections(all, nodeIds);
+  }, [extendedConnections, featured, nodes]);
 
   if (!nodes.length) {
     return (
@@ -172,20 +180,6 @@ export default function CosmographyScene3D({ concepts }: CosmographyScene3DProps
           {tCosmo('hint')}
         </motion.p>
       )}
-
-      {/* Chat with Federico — link */}
-      <Link
-        href={'/prototypes/chat' as any}
-        className="fixed bottom-8 left-6 z-40 flex items-center gap-2.5 px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#F5A623]/40 transition-all group backdrop-blur-sm"
-      >
-        <span className="text-lg opacity-60 group-hover:opacity-100 transition-opacity" style={{ color: '#F5A623' }}>
-          ◉
-        </span>
-        <span className="text-white/50 group-hover:text-white/90 text-sm transition-colors">
-          {tNav('nav_chat')}
-        </span>
-        <span className="text-white/20 group-hover:text-white/50 text-xs transition-colors">AI</span>
-      </Link>
 
       {/* Legend */}
       <div className="fixed bottom-8 right-6 z-30 flex flex-col gap-2 text-right">

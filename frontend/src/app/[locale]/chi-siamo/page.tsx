@@ -1,5 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
+// TODO: replace with the chosen video from @fedefaggin YouTube channel
+const FAGGIN_VIDEO_ID = 'C5fgYfNQJp0';
+
 export default async function AboutUsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'aboutUs' });
@@ -11,6 +14,21 @@ export default async function AboutUsPage({ params }: { params: Promise<{ locale
         <div className="max-w-[800px] mx-auto text-center">
           <h1 className="font-heading text-4xl font-bold mb-6">{t('title')}</h1>
           <p className="text-white/70 text-lg">{t('subtitle')}</p>
+        </div>
+      </section>
+
+      {/* Video di Federico */}
+      <section className="py-12 px-4">
+        <div className="max-w-[800px] mx-auto">
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+            <iframe
+              src={`https://www.youtube.com/embed/${FAGGIN_VIDEO_ID}?rel=0`}
+              title="Federico Faggin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
         </div>
       </section>
 

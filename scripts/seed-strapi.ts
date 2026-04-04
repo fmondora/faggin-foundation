@@ -1,3 +1,4 @@
+import 'dotenv/config';
 /**
  * Seed script for Strapi v5
  * Populates all content for the Faggin Foundation website.
@@ -10,12 +11,21 @@
  *   - Admin user created (bootstrap creates admin@faggin.local / Admin1234!)
  */
 
+
 const STRAPI_URL = process.env.STRAPI_URL || 'http://localhost:1337';
-let AUTH_TOKEN = '';
+let AUTH_TOKEN = process.env.STRAPI_API_TOKEN || '';
+
+// Debug output for STRAPI_API_TOKEN and AUTH_TOKEN
+console.log('DEBUG STRAPI_API_TOKEN:', process.env.STRAPI_API_TOKEN?.slice(0, 16), 'AUTH_TOKEN:', AUTH_TOKEN?.slice(0, 16));
 
 // ─── Auth ───────────────────────────────────────────────────────
 
 async function login() {
+  // Only perform admin login if no API token is set
+  if (AUTH_TOKEN) {
+    log('Using STRAPI_API_TOKEN for authentication');
+    return;
+  }
   const email = process.env.STRAPI_ADMIN_EMAIL || 'admin@faggin.local';
   const password = process.env.STRAPI_ADMIN_PASSWORD || 'Admin1234!';
 

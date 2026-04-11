@@ -525,7 +525,8 @@ async function seed() {
   log('Creating video themes...');
   const themeDocIds: string[] = [];
   for (let i = 0; i < VIDEO_THEMES.it.length; i++) {
-    const res = await create('video-themes', VIDEO_THEMES.it[i]);
+    // Ensure the IT locale is created explicitly (don't rely on Strapi default locale)
+    const res = await api('video-themes', 'POST', VIDEO_THEMES.it[i], 'it');
     const docId = res.data.documentId;
     themeDocIds.push(docId);
     log(`  ✓ [it] ${VIDEO_THEMES.it[i].name}`);
@@ -554,7 +555,8 @@ async function seed() {
   // 5. Books (i18n - IT first as default locale)
   log('Creating books...');
   for (let i = 0; i < BOOKS.it.length; i++) {
-    const res = await create('books', BOOKS.it[i]);
+    // Create books in the italian locale explicitly
+    const res = await api('books', 'POST', BOOKS.it[i], 'it');
     const docId = res.data.documentId;
     log(`  ✓ [it] ${BOOKS.it[i].title}`);
 
@@ -568,7 +570,8 @@ async function seed() {
   // 6. Events (i18n - IT first as default locale)
   log('Creating events...');
   for (let i = 0; i < EVENTS.it.length; i++) {
-    const res = await create('events', EVENTS.it[i]);
+    // Create events with explicit IT locale
+    const res = await api('events', 'POST', EVENTS.it[i], 'it');
     const docId = res.data.documentId;
     log(`  ✓ [it] ${EVENTS.it[i].title}`);
 
@@ -582,7 +585,8 @@ async function seed() {
   // 7. Bio sections (i18n - IT first as default locale)
   log('Creating bio sections...');
   for (let i = 0; i < BIO_SECTIONS.it.length; i++) {
-    const res = await create('bio-sections', BIO_SECTIONS.it[i]);
+    // Create bio sections with explicit IT locale
+    const res = await api('bio-sections', 'POST', BIO_SECTIONS.it[i], 'it');
     const docId = res.data.documentId;
     log(`  ✓ [it] ${BIO_SECTIONS.it[i].title}`);
 
@@ -600,7 +604,8 @@ async function seed() {
   // 8. Topics (i18n - IT first as default locale)
   log('Creating topics...');
   for (let i = 0; i < TOPICS.it.length; i++) {
-    const res = await create('topics', TOPICS.it[i]);
+    // Create topics explicitly in IT locale
+    const res = await api('topics', 'POST', TOPICS.it[i], 'it');
     const docId = res.data.documentId;
     log(`  ✓ [it] ${TOPICS.it[i].title}`);
 
@@ -617,10 +622,8 @@ async function seed() {
   const featuredVideoIds = videoDocIds.slice(0, 4);
 
   log('Creating home-page...');
-  await createSingleType('home-page', {
-    ...HOME_PAGE.it,
-    featuredVideos: featuredVideoIds,
-  });
+  // Create the IT localization explicitly for single types (don't rely on Strapi default)
+  await createSingleTypeLocalization('home-page', 'it', { ...HOME_PAGE.it, featuredVideos: featuredVideoIds });
   log('  ✓ [it]');
   for (const locale of ['en', 'de', 'es'] as const) {
     await createSingleTypeLocalization('home-page', locale, HOME_PAGE[locale]);
@@ -628,7 +631,7 @@ async function seed() {
   }
 
   log('Creating about-page...');
-  await createSingleType('about-page', ABOUT_PAGE.it);
+  await createSingleTypeLocalization('about-page', 'it', ABOUT_PAGE.it);
   log('  ✓ [it]');
   for (const locale of ['en', 'de', 'es'] as const) {
     await createSingleTypeLocalization('about-page', locale, ABOUT_PAGE[locale]);
@@ -636,7 +639,7 @@ async function seed() {
   }
 
   log('Creating video-page...');
-  await createSingleType('video-page', VIDEO_PAGE_DATA.it);
+  await createSingleTypeLocalization('video-page', 'it', VIDEO_PAGE_DATA.it);
   log('  ✓ [it]');
   for (const locale of ['en', 'de', 'es'] as const) {
     await createSingleTypeLocalization('video-page', locale, VIDEO_PAGE_DATA[locale]);
@@ -644,7 +647,7 @@ async function seed() {
   }
 
   log('Creating events-page...');
-  await createSingleType('events-page', EVENTS_PAGE_DATA.it);
+  await createSingleTypeLocalization('events-page', 'it', EVENTS_PAGE_DATA.it);
   log('  ✓ [it]');
   for (const locale of ['en', 'de', 'es'] as const) {
     await createSingleTypeLocalization('events-page', locale, EVENTS_PAGE_DATA[locale]);
@@ -652,7 +655,7 @@ async function seed() {
   }
 
   log('Creating research-page...');
-  await createSingleType('research-page', RESEARCH_PAGE_DATA.it);
+  await createSingleTypeLocalization('research-page', 'it', RESEARCH_PAGE_DATA.it);
   log('  ✓ [it]');
   for (const locale of ['en', 'de', 'es'] as const) {
     await createSingleTypeLocalization('research-page', locale, RESEARCH_PAGE_DATA[locale]);
@@ -660,7 +663,7 @@ async function seed() {
   }
 
   log('Creating site-config...');
-  await createSingleType('site-config', {
+  await createSingleTypeLocalization('site-config', 'it', {
     ...SITE_CONFIG.it,
     socialLinks: socialLinkIds,
   });

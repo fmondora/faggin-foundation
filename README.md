@@ -20,26 +20,26 @@ A multilingual website (IT, EN, DE, ES) built with Strapi headless CMS and Next.
 
 ```
 ┌──────────────────────────────────────────────────┐
-│              Frontend (Next.js 15)                │
-│         App Router + next-intl (4 locales)        │
-│                                                   │
-│  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐           │
-│  │  IT  │ │  EN  │ │  DE  │ │  ES  │           │
-│  └──────┘ └──────┘ └──────┘ └──────┘           │
-│                                                   │
+│              Frontend (Next.js 15)               │
+│         App Router + next-intl (4 locales)       │
+│                                                  │
+│  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐             │
+│  │  IT  │ │  EN  │ │  DE  │ │  ES  │             │
+│  └──────┘ └──────┘ └──────┘ └──────┘             │
+│                                                  │
 │  Tailwind CSS 4 · React 19 · TypeScript          │
-└────────────┬──────────────────┬───────────────────┘
+└────────────┬──────────────────┬──────────────────┘
              │                  │
      Strapi REST API    GoTrue Auth API
              │                  │
-┌────────────┴──────┐  ┌───────┴───────────────────┐
+┌────────────┴──────┐  ┌────────┴──────────────────┐
 │  Strapi v5 CMS    │  │  Supabase GoTrue          │
-│  15 content types │  │  Magic link (OTP)          │
-│  i18n plugin      │  │  Email via MailHog (dev)   │
-│  Custom vote API  │  │                            │
+│  15 content types │  │  Magic link (OTP)         │
+│  i18n plugin      │  │  Email via MailHog (dev)  │
+│  Custom vote API  │  │                           │
 └────────────┬──────┘  └───────┬───────────────────┘
-             │                  │
-        ┌────┴──────────────────┴────┐
+             │                 │
+        ┌────┴─────────────────┴─────┐
         │     PostgreSQL 16          │
         │  strapi DB + supabase_auth │
         └────────────────────────────┘
@@ -102,6 +102,18 @@ This starts 5 services:
 Strapi admin credentials (auto-created): `admin@faggin.local` / `Admin1234!`
 
 ### 3. Seed content (optional)
+
+To run the seed file:
+
+* Log into your Strapi Admin (localhost:1337/admin).
+* Go to Settings > API Tokens.
+* Click "Create new API Token".
+* Name: Seeder Token.
+* Token type: Full Access.
+* Duration: Unlimited (or whatever you prefer).
+* Copy the new token and paste it into your .env as STRAPI_API_TOKEN.
+
+Then run:
 
 ```bash
 npm install

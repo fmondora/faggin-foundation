@@ -82,7 +82,41 @@ module.exports = {
       strapi.log.info('[bootstrap] Public API permissions configured');
     }
 
-    // 3. Create full-access API token if none exists
+    // ─── 3. MANAGE LOCALES ────────────────────────────────────────
+    const i18nService = strapi.plugin('i18n').service('locales');
+
+    const desiredLocales = [
+      { code: 'it', name: 'Italian (it)' },
+      { code: 'en', name: 'English (en)' },
+      { code: 'de', name: 'German (de)' },
+      { code: 'es', name: 'Spanish (es)' },
+    ];
+
+    const existingLocales = await i18nService.find();
+    const existingCodes = existingLocales.map((l) => l.code);
+
+    for (const locale of desiredLocales) {
+      if (!existingCodes.includes(locale.code)) {
+        await i18nService.create({
+          name: locale.name,
+          code: locale.code,
+          isDefault: locale.code === 'it',
+        });
+        strapi.log.info(`[bootstrap] Created locale: ${locale.code}`);
+      }
+    }
+
+    // Ensure 'it' is the primary default locale
+    const currentDefault = existingLocales.find(l => l.isDefault);
+    if (currentDefault && currentDefault.code !== 'it') {
+      const itLocale = await i18nService.findByCode('it');
+      if (itLocale) {
+        await i18nService.update(itLocale.id, { isDefault: true });
+        strapi.log.info('[bootstrap] Default locale switched to Italian (it)');
+      }
+    }
+
+    // ─── 4. API TOKEN CHECK ───────────────────────────────────────
     const tokenCount = await strapi.db
       .query('admin::api-token')
       .count();
